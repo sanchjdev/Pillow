@@ -1,0 +1,5 @@
+com\pillowsuite\shared\util\PropertiesLoader.class
+com\pillowsuite\shared\messaging\enums\Queue.class
+com\pillowsuite\shared\messaging\RabbitMqConsumer.class
+com\pillowsuite\shared\messaging\TickerOverviewConsumer.class
+com\pillowsuite\shared\messaging\RabbitMqPublisher.class

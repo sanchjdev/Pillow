@@ -1,0 +1,32 @@
+# IntelliJ project files
+.idea/
+*.iml
+*.iws
+
+# VSCode (if you ever open with it)
+.vscode/
+
+# Build output
+/out/
+build/
+
+# Compiled class files
+*.class
+
+# Logs
+logs/
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Maven/Gradle (if using)
+target/
+.gradle/
+*.jar
+
+# Temporary files
+*.tmp
+*.swp
