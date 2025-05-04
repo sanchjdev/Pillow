@@ -13,12 +13,10 @@
         <module>rodimus-pipeline</module>
         <module>optimus-pipeline</module>
     </modules>
-
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -36,5 +34,8 @@
             <version>1.7.32</version>
         </dependency>
     </dependencies>
-
+    <build>
+        <plugins>
+        </plugins>
+    </build>
 </project>
