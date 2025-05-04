@@ -1,0 +1,21 @@
+package com.pillowsuite.integration.marketdata.request;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.pillowsuite.integration.marketdata.MarketPath;
+import com.pillowsuite.shared.model.FullTickerOverview;
+
+import java.io.IOException;
+import java.net.http.HttpResponse;
+
+// return ticker info for a specific symbol from polygon api
+public class TickerOverviewRequest implements Request<FullTickerOverview>{
+
+    @Override
+    public FullTickerOverview fetchData(String symbol, String date) throws IOException, InterruptedException {
+        String path = MarketPath.tickerOverview(symbol, date);
+        HttpResponse<String> response = client.makeGetRequest(path);
+
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.readValue(response.body(), FullTickerOverview.class);
+    }
+}
