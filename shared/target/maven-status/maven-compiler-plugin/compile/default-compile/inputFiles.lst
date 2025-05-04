@@ -1,5 +1,15 @@
-F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\messaging\RabbitMqConsumer.java
-F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\util\PropertiesLoader.java
 F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\messaging\enums\Queue.java
+F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\messaging\RabbitMqConsumer.java
 F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\messaging\RabbitMqPublisher.java
 F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\messaging\TickerOverviewConsumer.java
+F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\AllTickers.java
+F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\FullMarketSummary.java
+F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\FullMover.java
+F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\FullTickerOverview.java
+F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\MarketHoliday.java
+F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\MarketSummaryResults.java
+F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\Mover.java
+F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\TickerBasic.java
+F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\TickerOverview.java
+F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\TickerSummary.java
+F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\util\PropertiesLoader.java

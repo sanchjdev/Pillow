@@ -1,5 +1,15 @@
-com\pillowsuite\shared\util\PropertiesLoader.class
+com\pillowsuite\shared\model\FullMarketSummary.class
 com\pillowsuite\shared\messaging\enums\Queue.class
+com\pillowsuite\shared\model\TickerSummary.class
+com\pillowsuite\shared\model\TickerBasic.class
+com\pillowsuite\shared\model\MarketHoliday.class
+com\pillowsuite\shared\model\FullMover.class
+com\pillowsuite\shared\model\Mover.class
 com\pillowsuite\shared\messaging\RabbitMqConsumer.class
 com\pillowsuite\shared\messaging\TickerOverviewConsumer.class
 com\pillowsuite\shared\messaging\RabbitMqPublisher.class
+com\pillowsuite\shared\util\PropertiesLoader.class
+com\pillowsuite\shared\model\MarketSummaryResults.class
+com\pillowsuite\shared\model\FullTickerOverview.class
+com\pillowsuite\shared\model\AllTickers.class
+com\pillowsuite\shared\model\TickerOverview.class
