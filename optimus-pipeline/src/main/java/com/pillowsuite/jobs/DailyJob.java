@@ -1,17 +1,20 @@
 package com.pillowsuite.jobs;
 
-import com.pillowsuite.service.DataTransferProcess;
-import com.pillowsuite.service.MarketDateInfo;
+import java.time.LocalDate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.pillowsuite.service.DataTransferProcess;
+import com.pillowsuite.service.MarketDateInfo;
+
 
 public class DailyJob {
 
     private static final Logger logger = LoggerFactory.getLogger(DailyJob.class);
 
     public static void main(String[] args) throws Exception {
-        String date = "2024-12-24";
-        //String date = args.length > 0 ? args[0] : String.valueOf(LocalDate.now());
+        String date = args.length > 0 ? args[0] : String.valueOf(LocalDate.now());
         runDailyJob(date);
     }
 
