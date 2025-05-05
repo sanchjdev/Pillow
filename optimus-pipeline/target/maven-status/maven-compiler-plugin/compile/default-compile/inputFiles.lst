@@ -10,5 +10,6 @@ F:\Dev\PillowSuite\optimus-pipeline\src\main\java\com\pillowsuite\integration\ma
 F:\Dev\PillowSuite\optimus-pipeline\src\main\java\com\pillowsuite\jobs\DailyJob.java
 F:\Dev\PillowSuite\optimus-pipeline\src\main\java\com\pillowsuite\service\DataTransferProcess.java
 F:\Dev\PillowSuite\optimus-pipeline\src\main\java\com\pillowsuite\service\MarketDateInfo.java
+F:\Dev\PillowSuite\optimus-pipeline\src\main\java\com\pillowsuite\service\RabbitMqPublisher.java
 F:\Dev\PillowSuite\optimus-pipeline\src\main\java\com\pillowsuite\util\OptimusLogger.java
 F:\Dev\PillowSuite\optimus-pipeline\src\main\java\ScratchTest.java

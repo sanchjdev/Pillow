@@ -1,7 +1,4 @@
 F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\messaging\enums\Queue.java
-F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\messaging\RabbitMqConsumer.java
-F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\messaging\RabbitMqPublisher.java
-F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\messaging\TickerOverviewConsumer.java
 F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\AllTickers.java
 F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\FullMarketSummary.java
 F:\Dev\PillowSuite\shared\src\main\java\com\pillowsuite\shared\model\FullMover.java

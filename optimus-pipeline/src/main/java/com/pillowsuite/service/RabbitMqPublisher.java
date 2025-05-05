@@ -1,4 +1,4 @@
-package com.pillowsuite.shared.messaging;
+package com.pillowsuite.service;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

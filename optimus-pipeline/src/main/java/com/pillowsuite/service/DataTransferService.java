@@ -12,20 +12,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.pillowsuite.shared.model.*;
-import com.pillowsuite.shared.messaging.RabbitMqPublisher;
 import com.pillowsuite.shared.messaging.enums.Queue;
-import com.pillowsuite.service.MarketDateInfo;
 import com.pillowsuite.integration.marketdata.request.MarketSummaryRequest;
 import com.pillowsuite.integration.marketdata.request.AllTickersRequest;
 import com.pillowsuite.integration.marketdata.request.TickerOverviewRequest;
 
 // All transfer jobs/processes
-public class DataTransferProcess {
-    private final Logger logger = LoggerFactory.getLogger(DataTransferProcess.class);
+public class DataTransferService {
+    private final Logger logger = LoggerFactory.getLogger(DataTransferService.class);
     private final RabbitMqPublisher publisher;
     private final ObjectMapper mapper =  new ObjectMapper();
 
-    public DataTransferProcess() throws Exception {
+    public DataTransferService() throws Exception {
         this.publisher = new RabbitMqPublisher();
 
     }
@@ -92,7 +90,7 @@ public class DataTransferProcess {
     public void transferDailyMarketSummary(String date){
         Queue queue = Queue.DAILY_MARKET_SUMMARY;
         logger.info("Checking if market has data for " + date + ".");
-        if(MarketDateInfo.hasMarketData(date)) {
+        if(MarketDateService.hasMarketData(date)) {
             logger.info("Market has data.");
             try {
                 MarketSummaryRequest request = new MarketSummaryRequest();

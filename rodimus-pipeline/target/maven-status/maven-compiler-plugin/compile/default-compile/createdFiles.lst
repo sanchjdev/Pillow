@@ -1,0 +1,2 @@
+com\pillowsuite\service\messaging\RabbitMqConsumer.class
+com\pillowsuite\service\messaging\TickerOverviewConsumer.class

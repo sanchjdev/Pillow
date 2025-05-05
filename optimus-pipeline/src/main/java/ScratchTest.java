@@ -1,10 +1,10 @@
-import com.pillowsuite.service.DataTransferProcess;
+import com.pillowsuite.service.DataTransferService;
 
 
 public class ScratchTest {
     public static void main(String[] args) throws Exception {
 
-        DataTransferProcess transfer = new DataTransferProcess();
+        DataTransferService transfer = new DataTransferService();
         transfer.transferTopMovers();
         transfer.closeConnection();
 
