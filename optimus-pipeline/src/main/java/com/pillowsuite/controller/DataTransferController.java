@@ -1,4 +1,4 @@
-package com.pillowsuite.service;
+package com.pillowsuite.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,6 +8,8 @@ import java.util.concurrent.TimeoutException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pillowsuite.integration.marketdata.request.MoverRequest;
+import com.pillowsuite.service.MarketDateService;
+import com.pillowsuite.service.RabbitMqPublisher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,12 +20,12 @@ import com.pillowsuite.integration.marketdata.request.AllTickersRequest;
 import com.pillowsuite.integration.marketdata.request.TickerOverviewRequest;
 
 // All transfer jobs/processes
-public class DataTransferService {
-    private final Logger logger = LoggerFactory.getLogger(DataTransferService.class);
+public class DataTransferController {
+    private final Logger logger = LoggerFactory.getLogger(DataTransferController.class);
     private final RabbitMqPublisher publisher;
     private final ObjectMapper mapper =  new ObjectMapper();
 
-    public DataTransferService() throws Exception {
+    public DataTransferController() throws Exception {
         this.publisher = new RabbitMqPublisher();
 
     }

@@ -1,4 +1,4 @@
-package com.pillowsuite.service.messaging;
+package com.pillowsuite.service;
 
 import com.pillowsuite.shared.util.PropertiesLoader;
 import com.rabbitmq.client.*;
