@@ -1,6 +1,6 @@
 package com.pillowsuite.shared.messaging.enums;
 
-public enum Queue {
+public enum RabbitMQueue {
     ALL_TICKERS("all_tickers"),
     DAILY_MARKET_SUMMARY("daily_market_summary"),
     DAILY_TICKER_SUMMARY("daily_ticker_summary"),
@@ -10,7 +10,7 @@ public enum Queue {
 
     private final String name;
 
-    Queue(String name){
+    RabbitMQueue(String name){
         this.name = name;
     }
 

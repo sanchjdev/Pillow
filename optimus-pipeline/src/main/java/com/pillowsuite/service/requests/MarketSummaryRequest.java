@@ -1,4 +1,4 @@
-package com.pillowsuite.integration.marketdata.request;
+package com.pillowsuite.service.requests;
 
 import java.io.IOException;
 import java.net.http.HttpResponse;
@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.pillowsuite.integration.marketdata.MarketPath;
+import com.pillowsuite.util.MarketPath;
 import com.pillowsuite.shared.model.FullMarketSummary;
 import com.pillowsuite.shared.model.MarketSummaryResults;
 

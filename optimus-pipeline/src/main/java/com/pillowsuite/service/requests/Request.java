@@ -1,6 +1,6 @@
-package com.pillowsuite.integration.marketdata.request;
+package com.pillowsuite.service.requests;
 
-import com.pillowsuite.integration.marketdata.PolygonClient;
+import com.pillowsuite.service.PolygonClient;
 
 import java.io.IOException;
 

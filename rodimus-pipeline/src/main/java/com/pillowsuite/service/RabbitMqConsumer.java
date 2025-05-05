@@ -7,11 +7,12 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-public class RabbitMqConsumer {
+abstract class RabbitMqConsumer {
 
     private static final Logger logger = LoggerFactory.getLogger(RabbitMqConsumer.class);
     private static final PropertiesLoader config = new PropertiesLoader("config.properties");
     private final Channel channel;
+    public String message;
 
     // Constructor with server details and establishes a connection
     public RabbitMqConsumer() throws Exception {
@@ -27,22 +28,15 @@ public class RabbitMqConsumer {
 
     // Consumes from given queue and relies on process function to handle message
     public void consume(String queueName) throws IOException {
-        channel.queueDeclare(queueName, false, false, false, null);
         DeliverCallback deliverCallback = createDeliverCallback(channel);
         CancelCallback cancelCallback = createCancelCallback();
 
-        channel.basicConsume(queueName, true, deliverCallback, cancelCallback);
-
-
+        String consumerTag = channel.basicConsume(queueName, true, deliverCallback, cancelCallback);
+        //channel.basicCancel(consumerTag);
     }
 
-    // basic deliverCallback function
-    private static DeliverCallback createDeliverCallback(Channel channel){
-        return (consumerTag, delivery) -> {
-            String message = new String(delivery.getBody(), "UTF-8");
-            logger.info("RECEIVED MESSAGE: " + message);
-        };
-    }
+    // set class level variable - message to message body
+    protected abstract DeliverCallback createDeliverCallback(Channel channel);
 
     // basic cancelCallback function
     private static CancelCallback createCancelCallback(){
