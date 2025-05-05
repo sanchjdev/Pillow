@@ -7,7 +7,6 @@ import java.util.Comparator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import com.pillowsuite.integration.marketdata.MarketPath;
-import com.pillowsuite.service.MarketDateInfo;
 import com.pillowsuite.shared.model.FullMarketSummary;
 import com.pillowsuite.shared.model.MarketSummaryResults;
 

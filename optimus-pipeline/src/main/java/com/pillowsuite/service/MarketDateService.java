@@ -10,7 +10,7 @@ import com.pillowsuite.integration.marketdata.request.MarketHolidayRequest;
 import com.pillowsuite.shared.model.MarketHoliday;
 
 
-public class MarketDateInfo {
+public class MarketDateService {
 
     private static final List<String> closed = new ArrayList<>(Arrays.asList("SATURDAY", "SUNDAY"));
 

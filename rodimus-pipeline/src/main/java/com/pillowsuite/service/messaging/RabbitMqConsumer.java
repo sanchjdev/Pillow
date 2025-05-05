@@ -1,4 +1,4 @@
-package com.pillowsuite.shared.messaging;
+package com.pillowsuite.service.messaging;
 
 import com.pillowsuite.shared.util.PropertiesLoader;
 import com.rabbitmq.client.*;
@@ -7,14 +7,14 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-public class TickerOverviewConsumer {
+public class RabbitMqConsumer {
 
     private static final Logger logger = LoggerFactory.getLogger(RabbitMqConsumer.class);
     private static final PropertiesLoader config = new PropertiesLoader("config.properties");
     private final Channel channel;
 
     // Constructor with server details and establishes a connection
-    public TickerOverviewConsumer() throws Exception {
+    public RabbitMqConsumer() throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost(config.get("rabbitmq.ip"));
         factory.setUsername(config.get("rabbitmq.username"));

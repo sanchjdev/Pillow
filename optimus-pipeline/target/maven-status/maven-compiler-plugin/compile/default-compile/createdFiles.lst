@@ -13,3 +13,4 @@ com\pillowsuite\integration\marketdata\request\TickerOverviewRequest.class
 com\pillowsuite\service\MarketDateInfo.class
 com\pillowsuite\integration\marketdata\request\MarketHolidayRequest.class
 com\pillowsuite\integration\marketdata\request\AllTickersRequest.class
+com\pillowsuite\service\RabbitMqPublisher.class

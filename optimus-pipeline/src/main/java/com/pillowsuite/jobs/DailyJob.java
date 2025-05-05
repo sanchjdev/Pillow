@@ -5,8 +5,8 @@ import java.time.LocalDate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.pillowsuite.service.DataTransferProcess;
-import com.pillowsuite.service.MarketDateInfo;
+import com.pillowsuite.service.DataTransferService;
+import com.pillowsuite.service.MarketDateService;
 
 
 public class DailyJob {
@@ -19,9 +19,9 @@ public class DailyJob {
     }
 
     public static void runDailyJob(String date) throws Exception{
-        if(MarketDateInfo.hasMarketData(date)) {
+        if(MarketDateService.hasMarketData(date)) {
             logger.info("Daily job starting for "  + date + ".");
-            DataTransferProcess dailyJob = new DataTransferProcess();
+            DataTransferService dailyJob = new DataTransferService();
             dailyJob.transferMarketSummaryAndAllTickers(date);
             logger.info("Market summary and all US tickers processed.");
 
