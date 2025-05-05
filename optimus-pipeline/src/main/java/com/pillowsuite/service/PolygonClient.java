@@ -1,4 +1,6 @@
-package com.pillowsuite.integration.marketdata;
+package com.pillowsuite.service;
+
+import com.pillowsuite.util.MarketPath;
 
 import java.io.IOException;
 import java.net.URI;

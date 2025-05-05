@@ -7,17 +7,17 @@ import java.time.LocalDate;
 import java.util.concurrent.TimeoutException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.pillowsuite.integration.marketdata.request.MoverRequest;
+import com.pillowsuite.service.requests.MoverRequest;
 import com.pillowsuite.service.MarketDateService;
 import com.pillowsuite.service.RabbitMqPublisher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.pillowsuite.shared.model.*;
-import com.pillowsuite.shared.messaging.enums.Queue;
-import com.pillowsuite.integration.marketdata.request.MarketSummaryRequest;
-import com.pillowsuite.integration.marketdata.request.AllTickersRequest;
-import com.pillowsuite.integration.marketdata.request.TickerOverviewRequest;
+import com.pillowsuite.shared.messaging.enums.RabbitMQueue;
+import com.pillowsuite.service.requests.MarketSummaryRequest;
+import com.pillowsuite.service.requests.AllTickersRequest;
+import com.pillowsuite.service.requests.TickerOverviewRequest;
 
 // All transfer jobs/processes
 public class DataTransferController {
@@ -32,7 +32,7 @@ public class DataTransferController {
 
     // on hold - hitting some type of limit and getting "GOAWAY" from polygon
     public void transferTickerOverview() throws IOException, TimeoutException {
-        Queue queue = Queue.TICKER_OVERVIEW;
+        RabbitMQueue queue = RabbitMQueue.TICKER_OVERVIEW;
         try{
             AllTickersRequest allTickersRequest = new AllTickersRequest();
             List<String> tickers = allTickersRequest.fetchData();
@@ -67,7 +67,7 @@ public class DataTransferController {
     // Using MarketSummaryRequest parse ticker symbols and transfer
     // Only US stocks - 11k+ tickers
     public void transferAllTickers() throws IOException, TimeoutException {
-        Queue queue = Queue.ALL_TICKERS;
+        RabbitMQueue queue = RabbitMQueue.ALL_TICKERS;
         try{
             MarketSummaryRequest request = new MarketSummaryRequest();
             FullMarketSummary fms = request.fetchData(String.valueOf(LocalDate.now().minusDays(1)));
@@ -90,7 +90,7 @@ public class DataTransferController {
     // transfer process to gather today's market data for US stocks
     // date - YYYY-MM-DD
     public void transferDailyMarketSummary(String date){
-        Queue queue = Queue.DAILY_MARKET_SUMMARY;
+        RabbitMQueue queue = RabbitMQueue.DAILY_MARKET_SUMMARY;
         logger.info("Checking if market has data for " + date + ".");
         if(MarketDateService.hasMarketData(date)) {
             logger.info("Market has data.");
@@ -113,8 +113,8 @@ public class DataTransferController {
 
     // Combo of transferAllTickers and transfer DailyMarketSummary
     public void transferMarketSummaryAndAllTickers(String date){
-        Queue summaryQueue = Queue.DAILY_MARKET_SUMMARY;
-        Queue tickerQueue = Queue.ALL_TICKERS;
+        RabbitMQueue summaryQueue = RabbitMQueue.DAILY_MARKET_SUMMARY;
+        RabbitMQueue tickerQueue = RabbitMQueue.ALL_TICKERS;
         try{
             List<String> tickers = new ArrayList<>();
             MarketSummaryRequest request = new MarketSummaryRequest();
@@ -139,7 +139,7 @@ public class DataTransferController {
 
     // process to call top gainer/losers and move to rabbitmq
     public void transferTopMovers() throws IOException, InterruptedException {
-        Queue queue = Queue.TOP_MOVERS;
+        RabbitMQueue queue = RabbitMQueue.TOP_MOVERS;
         try {
             MoverRequest request = new MoverRequest();
             List<FullMover> movers = request.fetchData();

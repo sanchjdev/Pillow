@@ -1,4 +1,4 @@
-package com.pillowsuite.integration.marketdata;
+package com.pillowsuite.util;
 
 import java.text.MessageFormat;
 

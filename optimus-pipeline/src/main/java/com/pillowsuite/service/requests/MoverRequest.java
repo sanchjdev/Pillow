@@ -1,4 +1,4 @@
-package com.pillowsuite.integration.marketdata.request;
+package com.pillowsuite.service.requests;
 
 import java.io.IOException;
 import java.net.http.HttpResponse;
@@ -7,9 +7,8 @@ import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.pillowsuite.integration.marketdata.MarketPath;
+import com.pillowsuite.util.MarketPath;
 import com.pillowsuite.shared.model.FullMover;
-import com.pillowsuite.shared.model.Mover;
 
 public class MoverRequest implements Request<List<FullMover>>{
 

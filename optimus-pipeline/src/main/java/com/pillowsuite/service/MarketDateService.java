@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.pillowsuite.integration.marketdata.request.MarketHolidayRequest;
+import com.pillowsuite.service.requests.MarketHolidayRequest;
 import com.pillowsuite.shared.model.MarketHoliday;
 
 

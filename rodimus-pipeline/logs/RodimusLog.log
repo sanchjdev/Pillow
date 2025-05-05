@@ -1,0 +1,44 @@
+2025-05-04 23:15:04 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-04 23:18:01 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-04 23:18:01 [pool-1-thread-4] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-4] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-4] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-5] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-5] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-5] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-5] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-5] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-6] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-6] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-7] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-8] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-9] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-10] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-11] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-12] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-13] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-14] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-15] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-16] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-17] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-18] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-18] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-18] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-18] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-18] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-18] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-18] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-18] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:18:01 [pool-1-thread-18] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:22:23 [pool-1-thread-19] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:23:55 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-04 23:23:55 [pool-1-thread-4] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:31:57 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-04 23:31:57 [pool-1-thread-4] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:39:09 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-04 23:39:09 [pool-1-thread-4] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:46:54 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-04 23:46:55 [pool-1-thread-4] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:46:55 [main] INFO  c.p.service.RabbitMqConsumer - Consuming from top_movers.
+2025-05-04 23:47:14 [pool-1-thread-5] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-04 23:48:08 [pool-1-thread-6] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
