@@ -1,5 +1,6 @@
 package com.pillowsuite.service;
 
+import com.pillowsuite.shared.messaging.enums.RabbitMQueue;
 import com.pillowsuite.shared.util.PropertiesLoader;
 import com.rabbitmq.client.*;
 import org.slf4j.Logger;
@@ -7,12 +8,13 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-abstract class RabbitMqConsumer {
+public abstract class RabbitMqConsumer {
 
-    private static final Logger logger = LoggerFactory.getLogger(RabbitMqConsumer.class);
+    protected static final Logger logger = LoggerFactory.getLogger(RabbitMqConsumer.class);
     private static final PropertiesLoader config = new PropertiesLoader("config.properties");
     private final Channel channel;
-    public String message;
+    protected RabbitMQueue rabbitQueue;
+    protected String message;
 
     // Constructor with server details and establishes a connection
     public RabbitMqConsumer() throws Exception {
@@ -27,11 +29,11 @@ abstract class RabbitMqConsumer {
     }
 
     // Consumes from given queue and relies on process function to handle message
-    public void consume(String queueName) throws IOException {
+    public void consume() throws IOException {
         DeliverCallback deliverCallback = createDeliverCallback(channel);
         CancelCallback cancelCallback = createCancelCallback();
 
-        String consumerTag = channel.basicConsume(queueName, true, deliverCallback, cancelCallback);
+        String consumerTag = channel.basicConsume(rabbitQueue.getName(), true, deliverCallback, cancelCallback);
         //channel.basicCancel(consumerTag);
     }
 
