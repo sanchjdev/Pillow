@@ -1,4 +1,4 @@
-package com.pillowsuite.shared.model;
+package com.pillowsuite.shared.model.dto;
 
 import java.util.List;
 
@@ -12,8 +12,6 @@ public class FullMover {
     @JsonProperty("tickers")
     private List<Mover> movers;
 
-    private String direction;
-
     public List<Mover> getMovers() {
         return movers;
     }
@@ -22,11 +20,4 @@ public class FullMover {
         this.movers = movers;
     }
 
-    public String getDirection() {
-        return direction;
-    }
-
-    public void setDirection(String direction) {
-        this.direction = direction;
-    }
 }

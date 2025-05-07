@@ -1,11 +1,8 @@
-import java.util.List;
+import java.sql.Connection;
 
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import com.pillowsuite.shared.messaging.enums.RabbitMQueue;
-import com.pillowsuite.shared.model.FullMover;
+import com.pillowsuite.shared.infrastructure.DatabaseConnection;
+import com.pillowsuite.shared.model.repository.MoverRepository;
 
 
 public class ScratchTest {
@@ -20,6 +17,5 @@ public class ScratchTest {
 //        System.out.println(fullMovers.get(1).getDirection());
 //
 //
-
     }
 }

@@ -8,7 +8,8 @@ import java.util.List;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import com.pillowsuite.util.MarketPath;
-import com.pillowsuite.shared.model.FullMover;
+import com.pillowsuite.shared.model.dto.FullMover;
+import com.pillowsuite.shared.model.dto.Mover;
 
 public class MoverRequest implements Request<List<FullMover>>{
 
@@ -27,13 +28,19 @@ public class MoverRequest implements Request<List<FullMover>>{
         FullMover fmGain = mapper.readValue(gainerResponse.body(), FullMover.class);
         FullMover fmLose = mapper.readValue(loserResponse.body(), FullMover.class);
 
-        fmGain.setDirection("gainer");
-        fmLose.setDirection("loser");
+        this.setDirection(fmGain, "gainer");
+        this.setDirection(fmLose, "loser");
 
         movers.add(fmGain);
         movers.add(fmLose);
 
         return movers;
+    }
+
+    public void setDirection(FullMover fullMover, String direction){
+        for(Mover mover : fullMover.getMovers()){
+            mover.setDirection(direction);
+        }
     }
 
 }

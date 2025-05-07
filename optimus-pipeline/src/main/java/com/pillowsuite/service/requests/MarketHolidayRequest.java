@@ -7,7 +7,7 @@ import java.util.List;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pillowsuite.util.MarketPath;
-import com.pillowsuite.shared.model.MarketHoliday;
+import com.pillowsuite.shared.model.dto.MarketHoliday;
 
 
 public class MarketHolidayRequest implements Request<List<MarketHoliday>>{

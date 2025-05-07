@@ -2,7 +2,7 @@ package com.pillowsuite.service.requests;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pillowsuite.util.MarketPath;
-import com.pillowsuite.shared.model.TickerSummary;
+import com.pillowsuite.shared.model.dto.TickerSummary;
 
 import java.io.IOException;
 import java.net.http.HttpResponse;

@@ -1,4 +1,4 @@
-package com.pillowsuite.shared.model;
+package com.pillowsuite.shared.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

@@ -1,4 +1,4 @@
-package com.pillowsuite.service;
+package com.pillowsuite.service.consumers;
 
 import com.pillowsuite.shared.util.PropertiesLoader;
 import com.rabbitmq.client.*;
@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class TickerOverviewConsumer {
 
-    private static final Logger logger = LoggerFactory.getLogger(RabbitMqConsumer.class);
+    private static final Logger logger = LoggerFactory.getLogger(TickerOverviewConsumer.class);
     private static final PropertiesLoader config = new PropertiesLoader("config.properties");
     private final Channel channel;
 

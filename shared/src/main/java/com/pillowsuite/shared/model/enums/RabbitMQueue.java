@@ -1,4 +1,4 @@
-package com.pillowsuite.shared.messaging.enums;
+package com.pillowsuite.shared.model.enums;
 
 public enum RabbitMQueue {
     ALL_TICKERS("all_tickers"),

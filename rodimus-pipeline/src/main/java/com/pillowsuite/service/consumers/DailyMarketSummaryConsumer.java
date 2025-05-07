@@ -1,13 +1,13 @@
-package com.pillowsuite.service;
+package com.pillowsuite.service.consumers;
 
-import com.pillowsuite.shared.messaging.enums.RabbitMQueue;
+import com.pillowsuite.shared.model.enums.RabbitMQueue;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DeliverCallback;
 
-public class AllTickersConsumer extends RabbitMqConsumer {
+public class DailyMarketSummaryConsumer extends RabbitMqConsumer {
 
-    public AllTickersConsumer() throws Exception{
-        rabbitQueue = RabbitMQueue.ALL_TICKERS;
+    public DailyMarketSummaryConsumer() throws Exception{
+        rabbitQueue = RabbitMQueue.DAILY_MARKET_SUMMARY;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.pillowsuite.shared.model;
+package com.pillowsuite.shared.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -13,6 +13,7 @@ public class Mover {
     private String todaysChangePerc;
     private String todaysChange;
     private String date = String.valueOf(LocalDate.now());
+    private String direction;
 
     public String getTicker() {
         return ticker;
@@ -45,4 +46,8 @@ public class Mover {
     public void setDate(String date) {
         this.date = date;
     }
+
+    public String getDirection() { return direction; }
+
+    public void setDirection(String direction) { this.direction = direction; }
 }
