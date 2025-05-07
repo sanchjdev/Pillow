@@ -7,8 +7,8 @@ import java.util.Comparator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import com.pillowsuite.util.MarketPath;
-import com.pillowsuite.shared.model.FullMarketSummary;
-import com.pillowsuite.shared.model.MarketSummaryResults;
+import com.pillowsuite.shared.model.dto.FullMarketSummary;
+import com.pillowsuite.shared.model.dto.MarketSummaryResults;
 
 
 public class MarketSummaryRequest implements Request<FullMarketSummary>{

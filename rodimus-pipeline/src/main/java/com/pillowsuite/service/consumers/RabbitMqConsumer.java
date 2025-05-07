@@ -1,12 +1,14 @@
-package com.pillowsuite.service;
+package com.pillowsuite.service.consumers;
 
-import com.pillowsuite.shared.messaging.enums.RabbitMQueue;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.pillowsuite.shared.model.enums.RabbitMQueue;
 import com.pillowsuite.shared.util.PropertiesLoader;
 import com.rabbitmq.client.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+
 
 public abstract class RabbitMqConsumer {
 
@@ -15,6 +17,7 @@ public abstract class RabbitMqConsumer {
     private final Channel channel;
     protected RabbitMQueue rabbitQueue;
     protected String message;
+    protected ObjectMapper mapper = new ObjectMapper();
 
     // Constructor with server details and establishes a connection
     public RabbitMqConsumer() throws Exception {

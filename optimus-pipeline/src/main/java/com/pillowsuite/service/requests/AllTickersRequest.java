@@ -7,8 +7,8 @@ import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pillowsuite.util.MarketPath;
-import com.pillowsuite.shared.model.AllTickers;
-import com.pillowsuite.shared.model.TickerBasic;
+import com.pillowsuite.shared.model.dto.AllTickers;
+import com.pillowsuite.shared.model.dto.TickerBasic;
 
 public class AllTickersRequest implements Request<List<String>>{
 

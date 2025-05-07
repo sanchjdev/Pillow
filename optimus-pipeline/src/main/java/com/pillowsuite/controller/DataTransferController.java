@@ -10,11 +10,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pillowsuite.service.requests.MoverRequest;
 import com.pillowsuite.service.MarketDateService;
 import com.pillowsuite.service.RabbitMqPublisher;
+import com.pillowsuite.shared.model.dto.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.pillowsuite.shared.model.*;
-import com.pillowsuite.shared.messaging.enums.RabbitMQueue;
+import com.pillowsuite.shared.model.enums.RabbitMQueue;
 import com.pillowsuite.service.requests.MarketSummaryRequest;
 import com.pillowsuite.service.requests.AllTickersRequest;
 import com.pillowsuite.service.requests.TickerOverviewRequest;
@@ -39,7 +39,7 @@ public class DataTransferController {
             List<TickerOverview> overviews = new ArrayList<>();
             System.out.println(tickers.size());
             int chunkSize = 50;
-            for(int i = 0; i < tickers.size()/100; i += chunkSize){
+            for(int i = 0; i < tickers.size(); i += chunkSize){
                 int end = Math.min(i+chunkSize, tickers.size());
                 List<String> tickerChunk = tickers.subList(i, end);
                 // make request to polygon in chunks
