@@ -2,6 +2,7 @@ package com.pillowsuite.shared.model.repository;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 import com.pillowsuite.shared.infrastructure.DatabaseConnection;
 import com.pillowsuite.shared.util.PropertiesLoader;
@@ -18,4 +19,5 @@ public abstract class JdbcRepository {
     JdbcRepository() throws SQLException {
         conn = DatabaseConnection.getConnection();
     }
+
 }

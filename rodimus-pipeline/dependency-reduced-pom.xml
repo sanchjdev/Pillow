@@ -8,7 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>rodimus-pipeline</artifactId>
   <build>
-    <finalName>OptimusPipeline-DailyJob</finalName>
+    <finalName>ConsumeAndWriteToDb</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
@@ -22,9 +22,26 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.pillowsuite.jobs.DailyJob</mainClass>
+                  <mainClass>com.pillowsuite.jobs.ConsumeAndWriteToDb</mainClass>
                 </transformer>
               </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target>
+                <copy />
+              </target>
             </configuration>
           </execution>
         </executions>

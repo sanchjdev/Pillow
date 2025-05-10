@@ -1,11 +1,12 @@
 import com.pillowsuite.controller.DataTransferController;
+import com.pillowsuite.service.DataTransferService;
 
 
 public class ScratchTest {
     public static void main(String[] args) throws Exception {
 
-        DataTransferController transfer = new DataTransferController();
-        transfer.transferTopMovers();
+        DataTransferService transfer = new DataTransferService();
+        transfer.transferMarketSummaryAndAllTickers("2025-05-07");
         transfer.closeConnection();
 
 //        MoverRequest req = new MoverRequest();

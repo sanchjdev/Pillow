@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 
 
 public abstract class RabbitMqConsumer {
@@ -15,6 +16,7 @@ public abstract class RabbitMqConsumer {
     protected static final Logger logger = LoggerFactory.getLogger(RabbitMqConsumer.class);
     private static final PropertiesLoader config = new PropertiesLoader("config.properties");
     private final Channel channel;
+    private final Connection connection;
     protected RabbitMQueue rabbitQueue;
     protected String message;
     protected ObjectMapper mapper = new ObjectMapper();
@@ -26,7 +28,7 @@ public abstract class RabbitMqConsumer {
         factory.setUsername(config.get("rabbitmq.username"));
         factory.setPassword(config.get("rabbitmq.password"));
 
-        Connection connection = factory.newConnection();
+        this.connection = factory.newConnection();
         this.channel = connection.createChannel();
 
     }
@@ -48,6 +50,17 @@ public abstract class RabbitMqConsumer {
         return consumerTag -> {
             logger.info("CONSUMER CANCELLED: " + consumerTag);
         };
+    }
+
+    // check if queue is empty
+    public boolean isQueueEmpty() throws IOException {
+        // if queue is empty return true
+        return channel.basicGet(rabbitQueue.getName(), true) == null;
+    }
+
+    public void close() throws IOException, TimeoutException {
+        channel.close();
+        connection.close();
     }
 
 
