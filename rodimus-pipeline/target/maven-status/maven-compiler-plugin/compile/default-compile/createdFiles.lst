@@ -1,2 +1,12 @@
-com\pillowsuite\service\messaging\RabbitMqConsumer.class
-com\pillowsuite\service\messaging\TickerOverviewConsumer.class
+com\pillowsuite\service\consumers\DailyMarketSummaryConsumer$1.class
+com\pillowsuite\service\consumers\TickerOverviewConsumer.class
+com\pillowsuite\service\consumers\TopMoversConsumer$1.class
+com\pillowsuite\service\ConsumerService.class
+com\pillowsuite\service\consumers\DailyMarketSummaryConsumer.class
+com\pillowsuite\service\consumers\AllTickersConsumer.class
+com\pillowsuite\controller\ConsumerController.class
+com\pillowsuite\service\consumers\AllTickersConsumer$1.class
+com\pillowsuite\service\consumers\RabbitMqConsumer.class
+com\pillowsuite\service\consumers\TopMoversConsumer.class
+com\pillowsuite\jobs\ConsumeAndWriteToDb.class
+ScratchTest.class

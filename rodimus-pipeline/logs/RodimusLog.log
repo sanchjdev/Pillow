@@ -42,3 +42,402 @@
 2025-05-04 23:46:55 [main] INFO  c.p.service.RabbitMqConsumer - Consuming from top_movers.
 2025-05-04 23:47:14 [pool-1-thread-5] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
 2025-05-04 23:48:08 [pool-1-thread-6] INFO  c.p.service.RabbitMqConsumer - RECEIVED MESSAGE
+2025-05-07 01:29:27 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-07 01:29:27 [pool-1-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 01:55:40 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-07 01:55:40 [pool-1-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 01:55:40 [pool-1-thread-4] ERROR c.r.c.impl.ForgivingExceptionHandler - Consumer com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2@73bc6f7a (amq.ctag-IXBajtL0-YuHk0cd_RJxkQ) method handleDelivery for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1) threw an exception for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1)
+java.lang.NullPointerException: Cannot invoke "java.sql.PreparedStatement.setString(int, String)" because "this.stmt" is null
+	at com.pillowsuite.shared.model.repository.MoverRepository.buildInsertStatement(MoverRepository.java:53)
+	at com.pillowsuite.shared.model.repository.MoverRepository.bulkSave(MoverRepository.java:37)
+	at com.pillowsuite.service.consumers.TopMoversConsumer.lambda$createDeliverCallback$0(TopMoversConsumer.java:36)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:588)
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149)
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-05-07 01:55:40 [pool-1-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 01:55:40 [pool-1-thread-4] ERROR c.r.c.impl.ForgivingExceptionHandler - Consumer com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2@73bc6f7a (amq.ctag-IXBajtL0-YuHk0cd_RJxkQ) method handleDelivery for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1) threw an exception for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1)
+java.lang.NullPointerException: Cannot invoke "java.sql.PreparedStatement.setString(int, String)" because "this.stmt" is null
+	at com.pillowsuite.shared.model.repository.MoverRepository.buildInsertStatement(MoverRepository.java:53)
+	at com.pillowsuite.shared.model.repository.MoverRepository.bulkSave(MoverRepository.java:37)
+	at com.pillowsuite.service.consumers.TopMoversConsumer.lambda$createDeliverCallback$0(TopMoversConsumer.java:36)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:588)
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149)
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-05-07 01:55:40 [pool-1-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 01:55:40 [pool-1-thread-4] ERROR c.r.c.impl.ForgivingExceptionHandler - Consumer com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2@73bc6f7a (amq.ctag-IXBajtL0-YuHk0cd_RJxkQ) method handleDelivery for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1) threw an exception for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1)
+java.lang.NullPointerException: Cannot invoke "java.sql.PreparedStatement.setString(int, String)" because "this.stmt" is null
+	at com.pillowsuite.shared.model.repository.MoverRepository.buildInsertStatement(MoverRepository.java:53)
+	at com.pillowsuite.shared.model.repository.MoverRepository.bulkSave(MoverRepository.java:37)
+	at com.pillowsuite.service.consumers.TopMoversConsumer.lambda$createDeliverCallback$0(TopMoversConsumer.java:36)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:588)
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149)
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-05-07 01:58:52 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-07 01:58:52 [pool-1-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 01:58:52 [pool-1-thread-4] DEBUG c.p.s.m.repository.JdbcRepository - Insertting remaining Mover records.
+2025-05-07 02:19:41 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-07 02:22:44 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-07 02:24:18 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-07 02:24:18 [pool-1-thread-4] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 02:24:19 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Insertting remaining Mover records.
+2025-05-07 02:28:51 [pool-1-thread-5] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 02:28:52 [pool-1-thread-5] DEBUG c.p.s.m.repository.MoverRepository - Insertting remaining Mover records.
+2025-05-07 02:39:05 [pool-1-thread-6] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 02:39:05 [pool-1-thread-6] DEBUG c.p.s.m.repository.MoverRepository - Insertting remaining Mover records.
+2025-05-07 02:53:16 [pool-1-thread-7] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 02:53:17 [pool-1-thread-7] DEBUG c.p.s.m.repository.MoverRepository - Insertting remaining Mover records.
+2025-05-07 03:02:08 [pool-1-thread-8] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 03:02:08 [pool-1-thread-8] DEBUG c.p.s.m.repository.MoverRepository - Insertting remaining Mover records.
+2025-05-07 03:03:16 [pool-1-thread-9] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 03:03:16 [pool-1-thread-9] DEBUG c.p.s.m.repository.MoverRepository - Insertting remaining Mover records.
+2025-05-07 03:04:18 [pool-1-thread-10] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 03:04:18 [pool-1-thread-10] DEBUG c.p.s.m.repository.MoverRepository - Insertting remaining Mover records.
+2025-05-07 03:06:27 [pool-1-thread-11] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 03:06:27 [pool-1-thread-11] DEBUG c.p.s.m.repository.MoverRepository - Insertting remaining Mover records.
+2025-05-07 03:06:57 [pool-1-thread-12] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 03:06:57 [pool-1-thread-12] DEBUG c.p.s.m.repository.MoverRepository - Insertting remaining Mover records.
+2025-05-07 10:22:38 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-07 10:22:38 [pool-1-thread-4] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-07 10:22:38 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Insertting remaining Mover records.
+2025-05-08 00:40:57 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 00:40:57 [pool-1-thread-4] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-08 00:40:57 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Saving mover records.
+2025-05-08 00:47:32 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 00:47:32 [pool-1-thread-4] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-08 00:47:32 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Saving mover records.
+2025-05-08 00:48:37 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 00:48:37 [pool-1-thread-4] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-08 00:48:38 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Saving mover records.
+2025-05-08 00:51:16 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 00:51:19 [pool-1-thread-4] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-08 00:51:19 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Saving mover records.
+2025-05-08 00:53:25 [pool-1-thread-5] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-08 00:53:25 [pool-1-thread-5] DEBUG c.p.s.m.repository.MoverRepository - Saving mover records.
+2025-05-08 01:04:42 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 01:04:42 [pool-1-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-08 01:04:52 [pool-1-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:05:01 [pool-1-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:05:11 [pool-1-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:05:20 [pool-1-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:05:30 [pool-1-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:05:34 [pool-1-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-08 01:05:34 [pool-1-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-08 01:05:44 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:05:53 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:06:02 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:06:12 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:06:21 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:06:26 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-08 01:06:26 [pool-1-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-08 01:06:35 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:06:44 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:06:54 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:07:03 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:07:12 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:07:16 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-08 01:07:16 [pool-1-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-08 01:07:25 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:07:34 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:07:44 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:07:53 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:08:02 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:08:05 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-08 01:08:05 [pool-1-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-08 01:08:15 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:08:24 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:08:33 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:08:43 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:08:52 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:08:55 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-08 01:08:55 [pool-1-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-08 01:09:04 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:09:13 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:09:22 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:09:31 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:09:41 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:09:44 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-08 01:09:44 [pool-1-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-08 01:09:53 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:10:02 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:10:12 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:10:21 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:10:30 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:10:33 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-08 01:10:33 [pool-1-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-08 01:10:42 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:10:52 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:11:01 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:11:10 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:11:20 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:11:23 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-08 01:11:23 [pool-1-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-08 01:11:32 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:11:42 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:11:51 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:12:00 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:12:10 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:12:13 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-08 01:12:13 [pool-1-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-08 01:12:22 [pool-1-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:17:34 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 01:17:34 [pool-1-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-08 01:17:44 [pool-1-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:17:53 [pool-1-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:18:03 [pool-1-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:18:12 [pool-1-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:18:21 [pool-1-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-08 01:18:26 [pool-1-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-08 01:54:00 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 01:54:00 [pool-1-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-08 01:54:01 [pool-1-thread-4] ERROR c.r.c.impl.ForgivingExceptionHandler - Consumer com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2@1d400272 (amq.ctag-3DXoqSxnaFfcbugn_qjaRg) method handleDelivery for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1) threw an exception for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1)
+java.lang.NumberFormatException: For input string: "1.689799e+06"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.buildInsertStatement(SecurityRepository.java:67)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.bulkSave(SecurityRepository.java:50)
+	at com.pillowsuite.service.consumers.DailyMarketSummaryConsumer.lambda$createDeliverCallback$0(DailyMarketSummaryConsumer.java:28)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:588)
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149)
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-05-08 01:54:05 [pool-1-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-08 01:54:05 [pool-1-thread-5] ERROR c.r.c.impl.ForgivingExceptionHandler - Consumer com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2@1d400272 (amq.ctag-3DXoqSxnaFfcbugn_qjaRg) method handleDelivery for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1) threw an exception for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1)
+java.lang.NumberFormatException: For input string: "1.689799e+06"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.buildInsertStatement(SecurityRepository.java:67)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.bulkSave(SecurityRepository.java:50)
+	at com.pillowsuite.service.consumers.DailyMarketSummaryConsumer.lambda$createDeliverCallback$0(DailyMarketSummaryConsumer.java:28)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:588)
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149)
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-05-08 02:06:10 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 02:07:27 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 02:07:27 [pool-1-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-08 02:07:27 [pool-1-thread-4] ERROR c.r.c.impl.ForgivingExceptionHandler - Consumer com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2@586d03a7 (amq.ctag-KhaBAg2k49JkjV1BkuULAg) method handleDelivery for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1) threw an exception for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1)
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.util.ArrayList<com.pillowsuite.shared.model.dto.MarketSummaryResults>` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (StringReader); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1741)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1515)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1462)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.handleNonArray(CollectionDeserializer.java:392)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:252)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3612)
+	at com.pillowsuite.service.consumers.DailyMarketSummaryConsumer.lambda$createDeliverCallback$0(DailyMarketSummaryConsumer.java:25)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:588)
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149)
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-05-08 02:14:33 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 02:14:33 [pool-1-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-08 02:14:33 [pool-1-thread-4] ERROR c.r.c.impl.ForgivingExceptionHandler - Consumer com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2@420b16d7 (amq.ctag-2V6o-Nui2NS-HsiZMPxvyg) method handleDelivery for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1) threw an exception for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1)
+java.lang.NullPointerException: Cannot invoke "String.trim()" because "in" is null
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1838)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at com.pillowsuite.shared.util.DataUtil.toFloat2(DataUtil.java:32)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.buildInsertStatement(SecurityRepository.java:69)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.bulkSave(SecurityRepository.java:51)
+	at com.pillowsuite.service.consumers.DailyMarketSummaryConsumer.lambda$createDeliverCallback$0(DailyMarketSummaryConsumer.java:29)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:588)
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149)
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-05-08 02:31:28 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 02:31:28 [pool-1-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-08 02:31:29 [pool-1-thread-4] ERROR c.r.c.impl.ForgivingExceptionHandler - Consumer com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2@42275942 (amq.ctag-DDmArWkfUob-eGWl11psrg) method handleDelivery for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1) threw an exception for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1)
+java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Integer.parseInt(Integer.java:630)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.buildInsertStatement(SecurityRepository.java:70)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.bulkSave(SecurityRepository.java:51)
+	at com.pillowsuite.service.consumers.DailyMarketSummaryConsumer.lambda$createDeliverCallback$0(DailyMarketSummaryConsumer.java:29)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:588)
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149)
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-05-08 02:31:29 [pool-1-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-08 02:31:29 [pool-1-thread-5] ERROR c.r.c.impl.ForgivingExceptionHandler - Consumer com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2@42275942 (amq.ctag-DDmArWkfUob-eGWl11psrg) method handleDelivery for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1) threw an exception for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1)
+java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Integer.parseInt(Integer.java:630)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.buildInsertStatement(SecurityRepository.java:70)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.bulkSave(SecurityRepository.java:51)
+	at com.pillowsuite.service.consumers.DailyMarketSummaryConsumer.lambda$createDeliverCallback$0(DailyMarketSummaryConsumer.java:29)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:588)
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149)
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-05-08 02:31:29 [pool-1-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-08 02:31:29 [pool-1-thread-5] ERROR c.r.c.impl.ForgivingExceptionHandler - Consumer com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2@42275942 (amq.ctag-DDmArWkfUob-eGWl11psrg) method handleDelivery for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1) threw an exception for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1)
+java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Integer.parseInt(Integer.java:630)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.buildInsertStatement(SecurityRepository.java:70)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.bulkSave(SecurityRepository.java:51)
+	at com.pillowsuite.service.consumers.DailyMarketSummaryConsumer.lambda$createDeliverCallback$0(DailyMarketSummaryConsumer.java:29)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:588)
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149)
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-05-08 02:37:59 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 02:37:59 [pool-1-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-08 02:38:10 [pool-1-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-08 02:38:20 [pool-1-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-08 02:38:31 [pool-1-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-08 02:38:41 [pool-1-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-08 02:38:51 [pool-1-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-08 02:38:56 [pool-1-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving remaining records.
+2025-05-09 23:22:20 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-09 23:22:20 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-09 23:22:20 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-09 23:22:20 [pool-1-thread-4] DEBUG c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-09 23:22:20 [pool-3-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-09 23:22:20 [pool-5-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-09 23:22:20 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Saving mover records.
+2025-05-09 23:22:37 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-09 23:22:37 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-09 23:24:05 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-09 23:24:05 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-09 23:24:05 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-09 23:24:05 [pool-1-thread-4] INFO  c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-09 23:24:05 [pool-3-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-09 23:24:05 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Saving mover records.
+2025-05-09 23:24:05 [pool-5-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-09 23:24:20 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-09 23:24:21 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-09 23:24:36 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-09 23:24:36 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-09 23:24:52 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-09 23:24:52 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-09 23:25:07 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-09 23:25:08 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-09 23:25:23 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-09 23:25:23 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-09 23:25:31 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-09 23:25:31 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving remaining records.
+2025-05-10 00:20:52 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 00:20:52 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 00:20:52 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 00:20:52 [pool-1-thread-4] INFO  c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-10 00:20:52 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Saving mover records.
+2025-05-10 00:26:29 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 00:26:29 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 00:26:29 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 00:26:29 [pool-3-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-10 00:26:29 [pool-5-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-10 00:26:45 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 00:26:45 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 00:27:01 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 00:27:01 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 00:27:01 [pool-5-thread-4] ERROR c.r.c.impl.ForgivingExceptionHandler - Consumer com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2@76189405 (amq.ctag-Y108hN3dRWXp_DwuouPtuw) method handleDelivery for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1) threw an exception for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1)
+java.lang.NumberFormatException: For input string: "44446.92"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at com.pillowsuite.shared.util.DataUtil.scientificCheck(DataUtil.java:50)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.buildInsertStatement(SecurityRepository.java:68)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.bulkSave(SecurityRepository.java:51)
+	at com.pillowsuite.service.consumers.DailyMarketSummaryConsumer.lambda$createDeliverCallback$0(DailyMarketSummaryConsumer.java:29)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:588)
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149)
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-05-10 00:28:49 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 00:28:49 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 00:28:49 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 00:28:49 [pool-3-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-10 00:28:49 [pool-5-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-10 00:29:04 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 00:29:05 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 00:29:20 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 00:29:20 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 00:29:20 [pool-5-thread-4] ERROR c.r.c.impl.ForgivingExceptionHandler - Consumer com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2@417d1386 (amq.ctag-uZ9rZYhiYezZowPQBaYF4w) method handleDelivery for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1) threw an exception for channel AMQChannel(amqp://admin@192.168.0.27:5672/,1)
+java.lang.NumberFormatException: For input string: "44446.92"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at com.pillowsuite.shared.util.DataUtil.scientificCheck(DataUtil.java:50)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.buildInsertStatement(SecurityRepository.java:68)
+	at com.pillowsuite.shared.model.repository.SecurityRepository.bulkSave(SecurityRepository.java:51)
+	at com.pillowsuite.service.consumers.DailyMarketSummaryConsumer.lambda$createDeliverCallback$0(DailyMarketSummaryConsumer.java:29)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel$2.handleDelivery(AutorecoveringChannel.java:588)
+	at com.rabbitmq.client.impl.ConsumerDispatcher$5.run(ConsumerDispatcher.java:149)
+	at com.rabbitmq.client.impl.ConsumerWorkService$WorkPoolRunnable.run(ConsumerWorkService.java:111)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-05-10 00:29:30 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 00:29:39 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 00:29:49 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 00:29:54 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-10 00:38:54 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 00:38:54 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 00:38:54 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 00:38:54 [pool-3-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-10 00:38:54 [pool-5-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-10 00:39:10 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 00:39:10 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 00:39:25 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 00:39:25 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 00:39:41 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 00:39:41 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 00:39:56 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 00:39:57 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 00:40:14 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 00:40:14 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 00:40:22 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-10 00:40:22 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving remaining records.
+2025-05-10 01:37:18 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 01:37:19 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 01:37:19 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 01:37:19 [main] INFO  c.p.controller.ConsumerController - Starting Consumer Service.
+2025-05-10 01:37:19 [main] INFO  c.p.s.consumers.ConsumerService - Starting consumers.
+2025-05-10 01:37:19 [main] INFO  c.p.controller.ConsumerController - Checking queues.
+2025-05-10 01:37:19 [main] INFO  c.p.s.consumers.ConsumerService - Closing Top Movers consumer.
+2025-05-10 01:37:19 [main] INFO  c.p.s.consumers.ConsumerService - Closing All Tickers consumer.
+2025-05-10 01:37:19 [main] INFO  c.p.s.consumers.ConsumerService - Closing Daily Market Summary consumer.
+2025-05-10 01:37:19 [main] INFO  c.p.controller.ConsumerController - Consumer Service ending.
+2025-05-10 01:39:31 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 01:39:31 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 01:39:31 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 01:39:31 [main] INFO  c.p.controller.ConsumerController - Starting Consumer Service.
+2025-05-10 01:39:31 [main] INFO  c.p.s.consumers.ConsumerService - Starting consumers.
+2025-05-10 01:39:31 [main] INFO  c.p.controller.ConsumerController - Checking queues.
+2025-05-10 01:39:31 [main] INFO  c.p.s.consumers.ConsumerService - Closing Top Movers consumer.
+2025-05-10 01:39:31 [main] INFO  c.p.s.consumers.ConsumerService - Closing All Tickers consumer.
+2025-05-10 01:39:31 [main] INFO  c.p.s.consumers.ConsumerService - Closing Daily Market Summary consumer.
+2025-05-10 01:39:31 [main] INFO  c.p.controller.ConsumerController - Consumer Service ending.
