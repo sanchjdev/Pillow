@@ -441,3 +441,90 @@ java.lang.NumberFormatException: For input string: "44446.92"
 2025-05-10 01:39:31 [main] INFO  c.p.s.consumers.ConsumerService - Closing All Tickers consumer.
 2025-05-10 01:39:31 [main] INFO  c.p.s.consumers.ConsumerService - Closing Daily Market Summary consumer.
 2025-05-10 01:39:31 [main] INFO  c.p.controller.ConsumerController - Consumer Service ending.
+2025-05-10 23:06:05 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:06:05 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:06:05 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:06:05 [pool-3-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-10 23:06:05 [pool-5-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-10 23:06:21 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:06:21 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:06:37 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:06:37 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:06:52 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:06:53 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:07:08 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:07:09 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:07:24 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:07:25 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:07:32 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-10 23:07:32 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving remaining records.
+2025-05-10 23:40:18 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:40:18 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:40:18 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:40:18 [pool-1-thread-4] INFO  c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-10 23:40:18 [pool-3-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-10 23:40:18 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Saving mover records.
+2025-05-10 23:40:18 [pool-5-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-10 23:40:34 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:40:34 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:40:49 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:40:50 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:41:05 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:41:05 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:41:20 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:41:21 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:41:36 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:41:36 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:41:44 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-10 23:41:44 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving remaining records.
+2025-05-10 23:42:17 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:42:17 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:42:17 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:42:17 [pool-1-thread-4] INFO  c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-10 23:42:17 [pool-3-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-10 23:42:18 [pool-5-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-10 23:42:18 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Saving mover records.
+2025-05-10 23:42:33 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:42:33 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:43:01 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:43:01 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:43:01 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:43:01 [pool-1-thread-4] INFO  c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-10 23:43:01 [pool-3-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-10 23:43:02 [pool-5-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-10 23:43:02 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Saving mover records.
+2025-05-10 23:43:17 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:43:18 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:43:33 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:43:33 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:43:48 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:43:48 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:44:03 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:44:04 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:44:19 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:44:19 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:44:27 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-10 23:44:27 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving remaining records.
+2025-05-10 23:45:59 [pool-3-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-10 23:45:59 [pool-5-thread-5] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-10 23:46:15 [pool-3-thread-5] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:46:15 [pool-5-thread-5] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:47:45 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:47:45 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:47:45 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-10 23:47:45 [pool-1-thread-4] INFO  c.p.s.consumers.TopMoversConsumer - RECEIVED MESSAGE FROM TOP_MOVERS.
+2025-05-10 23:47:45 [pool-3-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM ALL_TICKERS.
+2025-05-10 23:47:46 [pool-1-thread-4] DEBUG c.p.s.m.repository.MoverRepository - Saving mover records.
+2025-05-10 23:47:46 [pool-5-thread-4] INFO  c.p.s.consumers.RabbitMqConsumer - RECEIVED MESSAGE FROM DAILY_MARKET_SUMMARY.
+2025-05-10 23:48:01 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:48:01 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:48:16 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:48:16 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:48:32 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:48:32 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:48:47 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:48:47 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:49:01 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving 2000 ticker records.
+2025-05-10 23:49:01 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving 2000 security records.
+2025-05-10 23:49:08 [pool-3-thread-4] DEBUG c.p.s.m.repository.TickerRepository - Saving remaining records.
+2025-05-10 23:49:08 [pool-5-thread-4] DEBUG c.p.s.m.r.SecurityRepository - Saving remaining records.

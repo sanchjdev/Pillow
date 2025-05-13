@@ -15,12 +15,14 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeoutException;
 
 public class DataTransferService {
     private final Logger logger = LoggerFactory.getLogger(DataTransferService.class);
     private final RabbitMqPublisher publisher;
     private final ObjectMapper mapper =  new ObjectMapper();
+    private String queueName = null;
 
     public DataTransferService() throws Exception {
         publisher = new RabbitMqPublisher();
@@ -86,37 +88,35 @@ public class DataTransferService {
 
     // transfer process to gather today's market data for US stocks
     // date - YYYY-MM-DD
-    public void transferDailyMarketSummary(String date){
-        RabbitMQueue queue = RabbitMQueue.DAILY_MARKET_SUMMARY;
-        logger.info("Checking if market has data for " + date + ".");
-        if(MarketDateUtil.hasMarketData(date)) {
-            logger.info("Market has data.");
-            try {
-                MarketSummaryRequest request = new MarketSummaryRequest();
-                FullMarketSummary fms = request.fetchData(date);
-                String message = mapper.writeValueAsString(fms);
-                publisher.publish(queue.getName(), message);
-                System.out.println(message);
+    public void DailyMarketSummary(LocalDate date) throws IOException {
+        String message = getMarketSummary(date);
+        logger.info("Sending " + date + " market summary.");
+        transfer(message);
+    }
 
-            } catch (Exception e) {
-                e.printStackTrace();
-                logger.error("", e);
-            }
-        }
-        else{
-            logger.info("Market does not have data.");
+    public void bulkDailyMarketSummary(LocalDate startDate, LocalDate endDate) throws IOException{
+        List<LocalDate> marketDates = MarketDateUtil.datesWithMarketDataInRange(startDate, endDate);
+        for(LocalDate marketDate : marketDates){
+            DailyMarketSummary(marketDate);
         }
     }
 
-    // Combo of transferAllTickers and transfer DailyMarketSummary
-    public void transferMarketSummaryAndAllTickers(String date){
+    public void topMovers() throws IOException {
+        String message = getTopMovers();
+        transfer(message);
+    }
+
+    // Basically the daily job, this utilizes one api call to fulfill both the
+    // tickers and market summary request
+    public void transferMarketSummaryAndAllTickers(LocalDate date){
         RabbitMQueue summaryQueue = RabbitMQueue.DAILY_MARKET_SUMMARY;
         RabbitMQueue tickerQueue = RabbitMQueue.ALL_TICKERS;
         try{
+            String dateString = date.toString();
             List<String> tickers = new ArrayList<>();
             MarketSummaryRequest request = new MarketSummaryRequest();
 
-            FullMarketSummary fms = request.fetchData(date);
+            FullMarketSummary fms = request.fetchData(dateString);
 
             for(MarketSummaryResults summary : fms.getSummaries()){
                 tickers.add(summary.getTicker());
@@ -130,6 +130,7 @@ public class DataTransferService {
 
         } catch(Exception e){
             e.printStackTrace();
+
             logger.error("", e);
         }
     }
@@ -150,7 +151,65 @@ public class DataTransferService {
 
     }
 
+    // New methods that are a bit more dynamic and has better Single Responsibility
+    // Methods to get the data and another to transfer to rabbitmq
+    private void transfer(String message) throws IOException {
+        queueCheck();
+        if(!message.equals("")){
+            publisher.publish(queueName, message);
+        }
+        else{
+            logger.info("Message is empty.");
+        }
+    }
+
+    private String getTopMovers(){
+        try{
+            MoverRequest request = new MoverRequest();
+            List<FullMover> movers = request.fetchData();
+            return mapper.writeValueAsString(movers);
+        } catch(Exception e){
+            logger.info("Market does not have data.");
+            return "";
+        }
+    }
+
+    // Returns a json string summary of the market. If data not available returns empty string
+    private String getMarketSummary(LocalDate date){
+        logger.info("Checking if market has data for " + date + ".");
+        if(MarketDateUtil.hasMarketData(date)) {
+            logger.info("Market has data.");
+            try {
+                String dateString = date.toString();
+                MarketSummaryRequest request = new MarketSummaryRequest();
+                FullMarketSummary fms = request.fetchData(dateString);
+                return mapper.writeValueAsString(fms);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                logger.error("", e);
+                return "";
+            }
+        }
+        else{
+            logger.info("Market does not have data.");
+            return "";
+        }
+    }
+
+    public void setQueueName(RabbitMQueue queue){
+        queueName = queue.getName();
+    }
+
+    private void queueCheck(){
+        if(queueName == null){
+            throw new NullPointerException("QueueName has not been set.");
+        }
+    }
+
     public void closeConnection() throws IOException, TimeoutException {
         publisher.close();
     }
+
+
 }

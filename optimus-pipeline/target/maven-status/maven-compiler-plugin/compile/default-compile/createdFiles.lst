@@ -2,6 +2,7 @@ com\pillowsuite\service\requests\TickerOverviewRequest.class
 com\pillowsuite\service\requests\Request.class
 com\pillowsuite\service\requests\TickerSummaryRequest.class
 com\pillowsuite\service\requests\MoverRequest.class
+com\pillowsuite\jobs\bulkDailyMarketSummaryDataTransfer.class
 com\pillowsuite\util\MarketDateUtil.class
 com\pillowsuite\service\PolygonClient.class
 com\pillowsuite\service\DataTransferService.class

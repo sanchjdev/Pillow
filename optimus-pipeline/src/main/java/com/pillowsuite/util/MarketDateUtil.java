@@ -20,19 +20,20 @@ public class MarketDateUtil {
         try {
             populateClosedList();
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
     }
 
     // date is not a closed holiday and a saturday or sunday
-    public static boolean isMarketOpen(String date) {
-        String day = String.valueOf(LocalDate.parse(date).getDayOfWeek());
-        return (!closed.contains(day) && !closed.contains(date));
+    public static boolean isMarketOpen(LocalDate date) {
+        String dateString = date.toString();
+        String day = String.valueOf(date.getDayOfWeek());
+        return (!closed.contains(day) && !closed.contains(dateString));
     }
 
     // isMarketOpen and is the date today or before today
-    public static boolean hasMarketData(String date) {
-        return (isMarketOpen(date) && !LocalDate.parse(date).isAfter(LocalDate.now()));
+    public static boolean hasMarketData(LocalDate date) {
+        return (isMarketOpen(date) && !date.isAfter(LocalDate.now()));
     }
 
     private static void populateClosedList() throws IOException, InterruptedException {
@@ -52,4 +53,20 @@ public class MarketDateUtil {
 
         return !now.isBefore(marketClose);
     }
+
+    public static List<LocalDate> datesWithMarketDataInRange(LocalDate startDate, LocalDate endDate){
+        LocalDate point = startDate;
+        List<LocalDate> marketDates = new ArrayList<>();
+        while(!point.isAfter(endDate)){
+            if(hasMarketData(point)){
+                marketDates.add(point);
+            }
+            point = point.plusDays(1);
+        }
+        return marketDates;
+    }
+
+//    public static List<String> datesWithMarketDataInWindow(String endDate, int window){
+//
+//    }
 }

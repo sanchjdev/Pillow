@@ -14,7 +14,7 @@ public class DailyJob {
     private static final Logger logger = LoggerFactory.getLogger(DailyJob.class);
 
     public static void main(String[] args) throws Exception {
-        String date = args.length > 0 ? args[0] : String.valueOf(LocalDate.now());
+        LocalDate date = args.length > 0 ? LocalDate.parse(args[0]) : LocalDate.now();
         DataTransferController controller = new DataTransferController();
         controller.runDailyJob(date);
 
