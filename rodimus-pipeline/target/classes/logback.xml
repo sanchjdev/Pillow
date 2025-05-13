@@ -27,6 +27,8 @@
         </filter>
     </appender>
 
+    <logger name="org.mariadb.jdbc" level="WARN" />
+
     <root level="debug">
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE" />

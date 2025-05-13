@@ -23,32 +23,44 @@ import com.pillowsuite.service.requests.TickerOverviewRequest;
 // All transfer jobs/processes
 public class DataTransferController {
     private final Logger logger = LoggerFactory.getLogger(DataTransferController.class);
-    private final RabbitMqPublisher publisher;
-    private final ObjectMapper mapper =  new ObjectMapper();
+    DataTransferService dataTransferService;
 
     public DataTransferController() throws Exception {
-        this.publisher = new RabbitMqPublisher();
+        dataTransferService = new DataTransferService();
     }
 
-    public void runDailyJob(String date) throws Exception{
-        if(MarketDateUtil.isEndOfDay()) {
+    public void runDailyJob(LocalDate date) throws Exception{
+        if(MarketDateUtil.hasMarketData(date)) {
             logger.info("Daily job starting for "  + date + ".");
-            DataTransferService dailyJob = new DataTransferService();
 
-            dailyJob.transferTopMovers();
+            dataTransferService.transferTopMovers();
             logger.info("Top movers processed.");
 
-            if(MarketDateUtil.isEndOfDay()){
-                dailyJob.transferMarketSummaryAndAllTickers(date);
-                logger.info("Market summary and all US tickers processed.");
-            } else { logger.info("Not end of day. Market summary and ticker did not process.");}
+            dataTransferService.transferMarketSummaryAndAllTickers(date);
+            logger.info("Market summary and all US tickers processed.");
 
-            dailyJob.closeConnection();
+            dataTransferService.closeConnection();
             logger.info("Daily job complete.");
         }
         else{
-            logger.info("Job will not run. The market hasn't closed for the day.");
+            logger.info("Job will not run. The market wasn't open today or hasn't closed yet.");
         }
+    }
+
+    public void dailyMarketSummaryDataTransfer(LocalDate date) throws IOException{
+        dataTransferService.setQueueName(RabbitMQueue.DAILY_MARKET_SUMMARY);
+        dataTransferService.DailyMarketSummary(date);
+    }
+
+
+    public void bulkDailyMarketSummaryDataTransfer(LocalDate startDate, LocalDate endDate) throws IOException{
+        dataTransferService.setQueueName(RabbitMQueue.DAILY_MARKET_SUMMARY);
+        dataTransferService.bulkDailyMarketSummary(startDate, endDate);
+    }
+
+    public void topMoversDataTransfer() throws IOException {
+        dataTransferService.setQueueName(RabbitMQueue.TOP_MOVERS);
+        dataTransferService.topMovers();
     }
 
 }
