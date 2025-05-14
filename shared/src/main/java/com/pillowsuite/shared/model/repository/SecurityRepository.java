@@ -17,9 +17,10 @@ public class SecurityRepository extends JdbcRepository implements Repository<Mar
 
     private static final Logger logger = LoggerFactory.getLogger(SecurityRepository.class);
 
+
     private static final String INSERT_SQL =
     "INSERT INTO securities_eod (ticker, open, close, high, low, volume, vw, transactions, weekday, market_date, created_date) "
-            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) "
+            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) "
             + "ON DUPLICATE KEY UPDATE "
             + "ticker = VALUES(ticker), "
             + "open = VALUES(open), "
@@ -51,6 +52,7 @@ public class SecurityRepository extends JdbcRepository implements Repository<Mar
         for(MarketSummaryResults marketSummaryResults : summaryResultsList){
             buildInsertStatement(marketSummaryResults);
             if(++count % BATCH == 0){
+                values.set("security-processing", "0");
                 stmt.executeBatch();
                 logger.debug("Saving " + BATCH + " security records.");
             }
@@ -61,7 +63,7 @@ public class SecurityRepository extends JdbcRepository implements Repository<Mar
 
     @Override
     public void buildInsertStatement(MarketSummaryResults marketSummaryResults) throws SQLException{
-        java.sql.Date marketDate = DataUtil.toSqlDate(String.valueOf(LocalDate.now()));
+        java.sql.Date marketDate = DataUtil.toSqlDate(marketSummaryResults.getMarketDate());
         float open = DataUtil.toFloat2(marketSummaryResults.getOpen());
         float close = DataUtil.toFloat2(marketSummaryResults.getClose());
         float high = DataUtil.toFloat2(marketSummaryResults.getHigh());

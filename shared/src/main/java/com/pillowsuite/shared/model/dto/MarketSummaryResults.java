@@ -32,6 +32,11 @@ public class MarketSummaryResults {
 
     private String weekDay;
 
+    private String marketDate;
+
+    public String getMarketDate() { return marketDate; }
+
+    public void setMarketDate(String marketDate) { this.marketDate = marketDate; }
 
     public String getTicker(){
         return ticker;

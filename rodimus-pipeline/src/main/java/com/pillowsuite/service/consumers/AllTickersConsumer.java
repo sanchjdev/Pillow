@@ -13,6 +13,7 @@ public class AllTickersConsumer extends RabbitMqConsumer {
 
     public AllTickersConsumer() throws Exception{
         rabbitQueue = RabbitMQueue.ALL_TICKERS;
+        processProp = "ticker-processing";
     }
 
     @Override
@@ -20,7 +21,7 @@ public class AllTickersConsumer extends RabbitMqConsumer {
         return (consumerTag, delivery) -> {
             message = new String(delivery.getBody(), "UTF-8");
             logger.info("RECEIVED MESSAGE FROM " + rabbitQueue.name() + ".");
-            queueCheckCycle = 0;
+            values.set(processProp, "0");
             List<String> tickers = mapper.readValue(message, new TypeReference<List<String>>() {});
 
             try{

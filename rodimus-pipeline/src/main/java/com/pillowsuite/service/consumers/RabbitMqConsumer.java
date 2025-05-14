@@ -15,12 +15,14 @@ public abstract class RabbitMqConsumer {
 
     protected static final Logger logger = LoggerFactory.getLogger(RabbitMqConsumer.class);
     private static final PropertiesLoader config = new PropertiesLoader("config.properties");
+    protected static final PropertiesLoader values = new PropertiesLoader("values.properties");
     private final Channel channel;
     private final Connection connection;
-    protected int queueCheckCycle = 0;
     protected RabbitMQueue rabbitQueue;
     protected String message;
+    protected String processProp;
     protected ObjectMapper mapper = new ObjectMapper();
+
 
     // Constructor with server details and establishes a connection
     public RabbitMqConsumer() throws Exception {
@@ -60,12 +62,13 @@ public abstract class RabbitMqConsumer {
     }
 
     public void queueShutdownProcess() throws IOException, InterruptedException, TimeoutException {
-        while(queueCheckCycle != 12){
-            Thread.sleep(5000);
-            logger.info(String.format("Checking %s queue.", rabbitQueue.getName()));
-            if(isQueueEmpty()){
-                queueCheckCycle++;
-                logger.info(String.format("%s queue empty - Cycle %d", rabbitQueue.getName(), queueCheckCycle));
+        int processing = Integer.parseInt(values.get(processProp));
+        while(processing != 2){
+            values.set(processProp, String.valueOf(processing + 1));
+            Thread.sleep(30000);
+            processing = Integer.parseInt(values.get(processProp));
+            if(processing != 0){
+                logger.info(String.format("%s is not processing any messages - check %d", rabbitQueue.getName(), processing));
             }
         }
         logger.info(String.format("Shutting down %s consumer", rabbitQueue.getName()));
@@ -76,7 +79,5 @@ public abstract class RabbitMqConsumer {
         channel.close();
         connection.close();
     }
-
-
 
 }

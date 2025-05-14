@@ -29,7 +29,7 @@ public class MarketSummaryRequest implements Request<FullMarketSummary>{
             fms.getSummaries().sort(Comparator.comparing(MarketSummaryResults::getTicker));
             fms.setSummaryDate(date);
         } catch(Exception e){
-            logger.info("MarketSummary is empty.");
+            logger.info(String.format("No market data for %s", date));
             return null;
         }
 
