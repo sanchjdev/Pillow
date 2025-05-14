@@ -28,8 +28,6 @@ public class DailyMarketSummaryConsumer extends RabbitMqConsumer {
             message = new String(delivery.getBody(), "UTF-8");
             logger.info("RECEIVED MESSAGE FROM " + rabbitQueue.name() + ".");
             queueCheckCycle = 0;
-
-
             try{
                 FullMarketSummary fullMarketSummary = mapper.readValue(message, new TypeReference<>() {});
                 SecurityRepository  securityRepository = new SecurityRepository();

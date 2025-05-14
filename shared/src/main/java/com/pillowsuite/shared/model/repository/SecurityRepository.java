@@ -18,11 +18,10 @@ public class SecurityRepository extends JdbcRepository implements Repository<Mar
     private static final Logger logger = LoggerFactory.getLogger(SecurityRepository.class);
 
     private static final String INSERT_SQL =
-    "INSERT INTO securities_eod (ticker, market_date, open, close, high, low, volume, vw, transactions, created_date) "
+    "INSERT INTO securities_eod (ticker, open, close, high, low, volume, vw, transactions, weekday, market_date, created_date) "
             + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) "
             + "ON DUPLICATE KEY UPDATE "
             + "ticker = VALUES(ticker), "
-            + "market_date = VALUES(market_date), "
             + "open = VALUES(open), "
             + "close = VALUES(close), "
             + "high = VALUES(high), "
@@ -30,6 +29,8 @@ public class SecurityRepository extends JdbcRepository implements Repository<Mar
             + "volume = VALUES(volume), "
             + "vw = VALUES(vw), "
             + "transactions = VALUES(transactions), "
+            + "weekday = VALUES(weekday), "
+            + "market_date = VALUES(market_date), "
             + "created_date = VALUES(created_date);";
 
     private PreparedStatement stmt;
@@ -72,15 +73,16 @@ public class SecurityRepository extends JdbcRepository implements Repository<Mar
 
 
         stmt.setString(1, marketSummaryResults.getTicker());
-        stmt.setDate(2, marketDate);
-        stmt.setFloat(3, open);
-        stmt.setFloat(4, close);
-        stmt.setFloat(5, high);
-        stmt.setFloat(6, low);
-        stmt.setInt(7, volume);
-        stmt.setFloat(8, vw);
-        stmt.setInt(9, transactions);
-        stmt.setTimestamp(10, timestamp);
+        stmt.setFloat(2, open);
+        stmt.setFloat(3, close);
+        stmt.setFloat(4, high);
+        stmt.setFloat(5, low);
+        stmt.setInt(6, volume);
+        stmt.setFloat(7, vw);
+        stmt.setInt(8, transactions);
+        stmt.setString(9, marketSummaryResults.getWeekDay());
+        stmt.setDate(10, marketDate);
+        stmt.setTimestamp(11, timestamp);
 
         stmt.addBatch();
     }

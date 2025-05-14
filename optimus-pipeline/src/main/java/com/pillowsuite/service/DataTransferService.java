@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.concurrent.TimeoutException;
 
@@ -94,6 +95,7 @@ public class DataTransferService {
             logger.info("Sending " + date + " market summary.");
             transfer(message);
         }
+        logger.info("Message is empty");
     }
 
     public void bulkDailyMarketSummary(LocalDate startDate, LocalDate endDate) throws IOException, InterruptedException {
@@ -189,9 +191,15 @@ public class DataTransferService {
         logger.info("Checking if market has data for " + date + ".");
         if(MarketDateUtil.hasMarketData(date)) {
             try {
+                String weekDay = MarketDateUtil.capitalizeFirst(date.getDayOfWeek().toString());
                 String dateString = date.toString();
                 MarketSummaryRequest request = new MarketSummaryRequest();
                 FullMarketSummary fms = request.fetchData(dateString);
+                if(fms != null){
+                    for(MarketSummaryResults summary : fms.getSummaries()){
+                        summary.setWeekDay(weekDay);
+                    }
+                }
                 return (fms == null) ? "" : mapper.writeValueAsString(fms);
 
             } catch (Exception e) {

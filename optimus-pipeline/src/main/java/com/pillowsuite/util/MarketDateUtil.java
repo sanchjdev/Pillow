@@ -66,6 +66,10 @@ public class MarketDateUtil {
         return marketDates;
     }
 
+    public static String capitalizeFirst(String text){
+        return text.substring(0, 1).toUpperCase() + text.substring(1).toLowerCase();
+    }
+
 //    public static List<String> datesWithMarketDataInWindow(String endDate, int window){
 //
 //    }

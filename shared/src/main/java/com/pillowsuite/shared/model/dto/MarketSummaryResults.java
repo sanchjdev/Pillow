@@ -30,6 +30,7 @@ public class MarketSummaryResults {
     @JsonProperty("vw")
     private String vwap;
 
+    private String weekDay;
 
 
     public String getTicker(){
@@ -104,4 +105,7 @@ public class MarketSummaryResults {
         vwap = vw;
     }
 
+    public String getWeekDay() { return weekDay; }
+
+    public void setWeekDay(String weekDay) { this.weekDay = weekDay; }
 }
