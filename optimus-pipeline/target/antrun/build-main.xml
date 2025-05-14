@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="maven-antrun-" default="main">
   <target name="main">
-    <copy file="F:\Dev\PillowSuite\optimus-pipeline\target/OptimusPipeline-DailyJob.jar" todir="F:/Dev/Built Jars" />
+    <copy file="F:\Dev\PillowSuite\optimus-pipeline\target/BulkMarketSummary.jar" todir="F:/Dev/Built Jars" />
   </target>
 </project>

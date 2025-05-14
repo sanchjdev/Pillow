@@ -17,6 +17,7 @@ public abstract class RabbitMqConsumer {
     private static final PropertiesLoader config = new PropertiesLoader("config.properties");
     private final Channel channel;
     private final Connection connection;
+    protected int queueCheckCycle = 0;
     protected RabbitMQueue rabbitQueue;
     protected String message;
     protected ObjectMapper mapper = new ObjectMapper();
@@ -56,6 +57,19 @@ public abstract class RabbitMqConsumer {
     public boolean isQueueEmpty() throws IOException {
         // if queue is empty return true
         return channel.basicGet(rabbitQueue.getName(), true) == null;
+    }
+
+    public void queueShutdownProcess() throws IOException, InterruptedException, TimeoutException {
+        while(queueCheckCycle != 12){
+            Thread.sleep(5000);
+            logger.info(String.format("Checking %s queue.", rabbitQueue.getName()));
+            if(isQueueEmpty()){
+                queueCheckCycle++;
+                logger.info(String.format("%s queue empty - Cycle %d", rabbitQueue.getName(), queueCheckCycle));
+            }
+        }
+        logger.info(String.format("Shutting down %s consumer", rabbitQueue.getName()));
+        close();
     }
 
     public void close() throws IOException, TimeoutException {

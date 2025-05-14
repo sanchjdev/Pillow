@@ -3,7 +3,7 @@
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>rodimus-pipeline/logs/RodimusLog.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <fileNamePattern>RodimusLog.%i.log</fileNamePattern> <!-- Pattern for rolled-over files -->
+            <fileNamePattern>rodimus-pipeline/logs/RodimusLog.%i.log</fileNamePattern> <!-- Pattern for rolled-over files -->
             <minIndex>1</minIndex> <!-- Starting file index -->
             <maxIndex>5</maxIndex> <!-- Maximum number of old log files to keep -->
         </rollingPolicy>
