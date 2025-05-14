@@ -23,4 +23,8 @@ public class PropertiesLoader {
     public String get(String key){
         return properties.getProperty(key);
     }
+
+    public void set(String key, String value) {
+        properties.setProperty(key, value);
+    }
 }

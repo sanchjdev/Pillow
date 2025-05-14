@@ -21,6 +21,7 @@ public class TopMoversConsumer extends RabbitMqConsumer {
 
     public TopMoversConsumer() throws Exception {
         rabbitQueue = RabbitMQueue.TOP_MOVERS;
+        processProp = "mover-processing";
     }
 
     @Override
@@ -28,7 +29,7 @@ public class TopMoversConsumer extends RabbitMqConsumer {
         return (consumerTag, delivery) -> {
             message = new String(delivery.getBody(), "UTF-8");
             logger.info("RECEIVED MESSAGE FROM " + rabbitQueue.name() + ".");
-            queueCheckCycle = 0;
+            values.set(processProp, "0");
             List<FullMover> fms = mapper.readValue(message, new TypeReference<List<FullMover>>() {});
             List<Mover> moverList = new ArrayList<>();
 

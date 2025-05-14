@@ -91,11 +91,10 @@ public class DataTransferService {
     // date - YYYY-MM-DD
     public void DailyMarketSummary(LocalDate date) throws IOException {
         String message = getMarketSummary(date);
+        // message has data
         if(!message.equals("")){
-            logger.info("Sending " + date + " market summary.");
             transfer(message);
         }
-        logger.info("Message is empty");
     }
 
     public void bulkDailyMarketSummary(LocalDate startDate, LocalDate endDate) throws IOException, InterruptedException {
@@ -110,8 +109,10 @@ public class DataTransferService {
                 DailyMarketSummary(date);
             }
             logger.info(String.format("Completed chunk %d", chunk++));
-            logger.info("Sleeping for 80 seconds to avoid GO AWAY");
-            Thread.sleep(80000);
+            // once end equals list size then all marketDates have been chunked
+            if(end != marketDates.size()){
+                avoidGoAway(80);
+            }
         }
     }
 
@@ -198,6 +199,7 @@ public class DataTransferService {
                 if(fms != null){
                     for(MarketSummaryResults summary : fms.getSummaries()){
                         summary.setWeekDay(weekDay);
+                        summary.setMarketDate(dateString);
                     }
                 }
                 return (fms == null) ? "" : mapper.writeValueAsString(fms);
@@ -228,10 +230,26 @@ public class DataTransferService {
         publisher.close();
     }
 
-    private void avoidGoAway(int seconds){
-        int ms = seconds * 1000;
-        Thread avoid = new Thread();
+    private void avoidGoAway(int seconds) throws InterruptedException {
+        Thread counter = new Thread(() -> {
+            sleepCounter(seconds);
+        });
 
+        logger.info(String.format("Sleeping for %d seconds to avoid GO AWAY", seconds));
+        counter.start();
+        Thread.sleep((long) seconds * 1000);
+    }
+
+    private void sleepCounter(int seconds){
+        int x = 1;
+        try{
+            while(x < seconds){
+                Thread.sleep(1000);
+                logger.info(String.valueOf(x++));
+            }
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
     }
 
 

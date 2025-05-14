@@ -20,6 +20,7 @@ public class DailyMarketSummaryConsumer extends RabbitMqConsumer {
 
     public DailyMarketSummaryConsumer() throws Exception{
         rabbitQueue = RabbitMQueue.DAILY_MARKET_SUMMARY;
+        processProp = "security-processing";
     }
 
     @Override
@@ -27,7 +28,7 @@ public class DailyMarketSummaryConsumer extends RabbitMqConsumer {
         return (consumerTag, delivery) -> {
             message = new String(delivery.getBody(), "UTF-8");
             logger.info("RECEIVED MESSAGE FROM " + rabbitQueue.name() + ".");
-            queueCheckCycle = 0;
+            values.set(processProp, "0");
             try{
                 FullMarketSummary fullMarketSummary = mapper.readValue(message, new TypeReference<>() {});
                 SecurityRepository  securityRepository = new SecurityRepository();
