@@ -15,7 +15,6 @@ public class ConsumerService {
     private final TopMoversConsumer TMConsumer;
     private final AllTickersConsumer ATConsumer;
     private final DailyMarketSummaryConsumer DMSConsumer;
-    private int consuming = 3;
 
     public ConsumerService() throws Exception {
         TMConsumer = new TopMoversConsumer();
@@ -30,27 +29,34 @@ public class ConsumerService {
         DMSConsumer.consume();
     }
 
-    public int getConsuming(){
-        return consuming;
-    }
+    public void queueCheck() throws TimeoutException{
+        Thread tmThread = new Thread(() -> {
+            try {
+                TMConsumer.queueShutdownProcess();
+            } catch (InterruptedException | IOException | TimeoutException e) {
+                e.printStackTrace();
+            }
+        });
 
-    public void queueCheckClose() throws IOException, TimeoutException {
-        if(TMConsumer.isQueueEmpty()){
-            logger.info("Closing Top Movers consumer.");
-            TMConsumer.close();
-            consuming -= 1;
-        }
-        if(ATConsumer.isQueueEmpty()){
-            logger.info("Closing All Tickers consumer.");
-            ATConsumer.close();
-            consuming -= 1;
-        }
-        if(DMSConsumer.isQueueEmpty()){
-            logger.info("Closing Daily Market Summary consumer.");
-            DMSConsumer.close();
-            consuming -= 1;
-        }
-    }
+        Thread atThread = new Thread(() -> {
+            try {
+                ATConsumer.queueShutdownProcess();
+            } catch (IOException | InterruptedException | TimeoutException e) {
+                e.printStackTrace();
+            }
+        });
 
+        Thread dmsThread = new Thread(() -> {
+            try {
+                DMSConsumer.queueShutdownProcess();
+            } catch (IOException | InterruptedException | TimeoutException e) {
+                e.printStackTrace();
+            }
+        });
+
+        tmThread.start();
+        atThread.start();
+        dmsThread.start();
+    }
 
 }

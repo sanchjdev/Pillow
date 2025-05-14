@@ -47,20 +47,23 @@ public class DataTransferController {
         }
     }
 
-    public void dailyMarketSummaryDataTransfer(LocalDate date) throws IOException{
+    public void dailyMarketSummaryDataTransfer(LocalDate date) throws IOException, TimeoutException {
         dataTransferService.setQueueName(RabbitMQueue.DAILY_MARKET_SUMMARY);
         dataTransferService.DailyMarketSummary(date);
+        dataTransferService.closeConnection();
     }
 
 
-    public void bulkDailyMarketSummaryDataTransfer(LocalDate startDate, LocalDate endDate) throws IOException{
+    public void bulkDailyMarketSummaryDataTransfer(LocalDate startDate, LocalDate endDate) throws IOException, TimeoutException, InterruptedException {
         dataTransferService.setQueueName(RabbitMQueue.DAILY_MARKET_SUMMARY);
         dataTransferService.bulkDailyMarketSummary(startDate, endDate);
+        dataTransferService.closeConnection();
     }
 
-    public void topMoversDataTransfer() throws IOException {
+    public void topMoversDataTransfer() throws IOException, TimeoutException {
         dataTransferService.setQueueName(RabbitMQueue.TOP_MOVERS);
         dataTransferService.topMovers();
+        dataTransferService.closeConnection();
     }
 
 }

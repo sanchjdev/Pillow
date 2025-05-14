@@ -7,9 +7,9 @@ import org.slf4j.LoggerFactory;
 
 import com.pillowsuite.controller.DataTransferController;
 
-public class bulkDailyMarketSummaryDataTransfer {
+public class BulkDailyMarketSummaryDataTransfer {
 
-    private static final Logger logger = LoggerFactory.getLogger(bulkDailyMarketSummaryDataTransfer.class);
+    private static final Logger logger = LoggerFactory.getLogger(BulkDailyMarketSummaryDataTransfer.class);
 
     public static void main(String[] args) throws Exception {
         if(args.length > 1){

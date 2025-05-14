@@ -90,14 +90,26 @@ public class DataTransferService {
     // date - YYYY-MM-DD
     public void DailyMarketSummary(LocalDate date) throws IOException {
         String message = getMarketSummary(date);
-        logger.info("Sending " + date + " market summary.");
-        transfer(message);
+        if(!message.equals("")){
+            logger.info("Sending " + date + " market summary.");
+            transfer(message);
+        }
     }
 
-    public void bulkDailyMarketSummary(LocalDate startDate, LocalDate endDate) throws IOException{
+    public void bulkDailyMarketSummary(LocalDate startDate, LocalDate endDate) throws IOException, InterruptedException {
+        int chunkSize = 90;
+        int chunk = 1;
         List<LocalDate> marketDates = MarketDateUtil.datesWithMarketDataInRange(startDate, endDate);
-        for(LocalDate marketDate : marketDates){
-            DailyMarketSummary(marketDate);
+        for(int x = 0; x < marketDates.size(); x += chunkSize){
+            int end = Math.min(x+chunkSize, marketDates.size());
+            List<LocalDate> marketDatesChunk = marketDates.subList(x, end);
+            logger.info(String.format("Loading chunk %d", chunk));
+            for(LocalDate date : marketDatesChunk){
+                DailyMarketSummary(date);
+            }
+            logger.info(String.format("Completed chunk %d", chunk++));
+            logger.info("Sleeping for 80 seconds to avoid GO AWAY");
+            Thread.sleep(80000);
         }
     }
 
@@ -129,9 +141,7 @@ public class DataTransferService {
             publisher.publish(tickerQueue.getName(), tickerMessage);
 
         } catch(Exception e){
-            e.printStackTrace();
-
-            logger.error("", e);
+            logger.error("Issue with publish or MarketSummary message is empty", e);
         }
     }
 
@@ -178,12 +188,11 @@ public class DataTransferService {
     private String getMarketSummary(LocalDate date){
         logger.info("Checking if market has data for " + date + ".");
         if(MarketDateUtil.hasMarketData(date)) {
-            logger.info("Market has data.");
             try {
                 String dateString = date.toString();
                 MarketSummaryRequest request = new MarketSummaryRequest();
                 FullMarketSummary fms = request.fetchData(dateString);
-                return mapper.writeValueAsString(fms);
+                return (fms == null) ? "" : mapper.writeValueAsString(fms);
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -209,6 +218,12 @@ public class DataTransferService {
 
     public void closeConnection() throws IOException, TimeoutException {
         publisher.close();
+    }
+
+    private void avoidGoAway(int seconds){
+        int ms = seconds * 1000;
+        Thread avoid = new Thread();
+
     }
 
 

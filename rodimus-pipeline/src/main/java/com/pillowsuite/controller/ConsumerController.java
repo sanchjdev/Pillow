@@ -16,13 +16,9 @@ public class ConsumerController {
         service = new ConsumerService();
     }
 
-    public void runConsumerService() throws IOException, TimeoutException {
+    public void runConsumerService() throws IOException, TimeoutException, InterruptedException {
         logger.info("Starting Consumer Service.");
         service.startConsumers();
-        while(service.getConsuming() > 0){
-            logger.info("Checking queues.");
-            service.queueCheckClose();
-        }
-        logger.info("Consumer Service ending.");
+        service.queueCheck();
     }
 }

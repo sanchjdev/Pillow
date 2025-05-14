@@ -1,5 +1,5 @@
 F:\Dev\PillowSuite\optimus-pipeline\src\main\java\com\pillowsuite\controller\DataTransferController.java
-F:\Dev\PillowSuite\optimus-pipeline\src\main\java\com\pillowsuite\jobs\bulkDailyMarketSummaryDataTransfer.java
+F:\Dev\PillowSuite\optimus-pipeline\src\main\java\com\pillowsuite\jobs\BulkDailyMarketSummaryDataTransfer.java
 F:\Dev\PillowSuite\optimus-pipeline\src\main\java\com\pillowsuite\jobs\DailyJob.java
 F:\Dev\PillowSuite\optimus-pipeline\src\main\java\com\pillowsuite\service\DataTransferService.java
 F:\Dev\PillowSuite\optimus-pipeline\src\main\java\com\pillowsuite\service\PolygonClient.java
