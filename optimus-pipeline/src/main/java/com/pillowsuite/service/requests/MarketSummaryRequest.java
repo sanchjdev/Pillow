@@ -26,8 +26,11 @@ public class MarketSummaryRequest implements Request<FullMarketSummary>{
         ObjectMapper mapper = new ObjectMapper();
         FullMarketSummary fms = mapper.readValue(response.body(), FullMarketSummary.class);
         try {
-            fms.getSummaries().sort(Comparator.comparing(MarketSummaryResults::getTicker));
-            fms.setSummaryDate(date);
+            if(fms != null) {
+                fms.getSummaries().sort(Comparator.comparing(MarketSummaryResults::getTicker));
+                fms.setSummaryDate(date);
+            }
+            else return null;
         } catch(Exception e){
             logger.info(String.format("No market data for %s", date));
             return null;
