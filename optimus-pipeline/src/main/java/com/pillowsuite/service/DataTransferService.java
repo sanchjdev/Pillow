@@ -133,15 +133,18 @@ public class DataTransferService {
 
             FullMarketSummary fms = request.fetchData(dateString);
 
-            for(MarketSummaryResults summary : fms.getSummaries()){
-                tickers.add(summary.getTicker());
+            if(fms != null){
+                for(MarketSummaryResults summary : fms.getSummaries()){
+                    tickers.add(summary.getTicker());
+                }
+
+                String summaryMessage = mapper.writeValueAsString(fms);
+                publisher.publish(summaryQueue.getName(), summaryMessage);
+
+                String tickerMessage = mapper.writeValueAsString(tickers);
+                publisher.publish(tickerQueue.getName(), tickerMessage);
+
             }
-
-            String summaryMessage = mapper.writeValueAsString(fms);
-            publisher.publish(summaryQueue.getName(), summaryMessage);
-
-            String tickerMessage = mapper.writeValueAsString(tickers);
-            publisher.publish(tickerQueue.getName(), tickerMessage);
 
         } catch(Exception e){
             logger.error("Issue with publish or MarketSummary message is empty", e);
