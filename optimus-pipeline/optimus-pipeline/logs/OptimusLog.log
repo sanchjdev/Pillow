@@ -1,0 +1,72 @@
+2025-05-07 10:22:32 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job starting for 2025-05-07.
+2025-05-07 10:22:32 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-07 10:22:32 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-07 10:22:32 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-07 10:22:32 [main] INFO  c.p.service.RabbitMqPublisher - publishing to top_movers
+2025-05-07 10:22:32 [main] DEBUG c.p.service.RabbitMqPublisher - published: [{"tickers":[{"ticker":"CURIW","todaysChangePerc":"634.4217840799954","todaysChange":"0.11229900000000001","date":"2025-05-07","direction":"gainer"},{"ticker":"ASST","todaysChangePerc":"214.75409836065575","todaysChange":"1.31","date":"2025-05-07","direction":"gainer"},{"ticker":"DEVS","todaysChangePerc":"80.93264248704664","todaysChange":"0.1562","date":"2025-05-07","direction":"gainer"},{"ticker":"PRCH","todaysChangePerc":"62.921135646687695","todaysChange":"3.9892000000000003","date":"2025-05-07","direction":"gainer"},{"ticker":"GPUS","todaysChangePerc":"58.5531914893617","todaysChange":"2.752","date":"2025-05-07","direction":"gainer"},{"ticker":"MEGL","todaysChangePerc":"50.85593220338984","todaysChange":"0.6001000000000001","date":"2025-05-07","direction":"gainer"},{"ticker":"ONEG","todaysChangePerc":"48.51485148514851","todaysChange":"0.98","date":"2025-05-07","direction":"gainer"},{"ticker":"XOSWW","todaysChangePerc":"46.99999999999999","todaysChange":"0.004699999999999999","date":"2025-05-07","direction":"gainer"},{"ticker":"CIGL","todaysChangePerc":"46.59090909090908","todaysChange":"2.05","date":"2025-05-07","direction":"gainer"},{"ticker":"AMODW","todaysChangePerc":"43.26123128119799","todaysChange":"0.025999999999999995","date":"2025-05-07","direction":"gainer"},{"ticker":"CURI","todaysChangePerc":"43.01212121212123","todaysChange":"1.4194000000000004","date":"2025-05-07","direction":"gainer"},{"ticker":"MOBXW","todaysChangePerc":"42.28571428571426","todaysChange":"0.029599999999999987","date":"2025-05-07","direction":"gainer"},{"ticker":"EOSEW","todaysChangePerc":"37.83744186046513","todaysChange":"0.16270100000000004","date":"2025-05-07","direction":"gainer"},{"ticker":"FTK","todaysChangePerc":"36.624649859944","todaysChange":"2.615000000000001","date":"2025-05-07","direction":"gainer"},{"ticker":"HYMCW","todaysChangePerc":"35.29411764705883","todaysChange":"0.0006000000000000001","date":"2025-05-07","direction":"gainer"},{"ticker":"EAF","todaysChangePerc":"33.446289393425964","todaysChange":"0.19740000000000002","date":"2025-05-07","direction":"gainer"},{"ticker":"OCG","todaysChangePerc":"32.530120481927696","todaysChange":"1.6199999999999992","date":"2025-05-07","direction":"gainer"},{"ticker":"GENVR","todaysChangePerc":"31.53224216130941","todaysChange":"1.5990000000000002","date":"2025-05-07","direction":"gainer"},{"ticker":"EOSE","todaysChangePerc":"31.250000000000007","todaysChange":"1.5750000000000002","date":"2025-05-07","direction":"gainer"},{"ticker":"LSBPW","todaysChangePerc":"31.050228310502288","todaysChange":"0.0068000000000000005","date":"2025-05-07","direction":"gainer"},{"ticker":"BULLW","todaysChangePerc":"30.547368421052635","todaysChange":"0.8706","date":"2025-05-07","direction":"gainer"}]},{"tickers":[{"ticker":"DGLY","todaysChangePerc":"-89.11538461538461","todaysChange":"-0.46340000000000003","date":"2025-05-07","direction":"loser"},{"ticker":"VSTEW","todaysChangePerc":"-64.01028277634961","todaysChange":"-0.0249","date":"2025-05-07","direction":"loser"},{"ticker":"VSTE","todaysChangePerc":"-58.54326396495071","todaysChange":"-0.21380000000000002","date":"2025-05-07","direction":"loser"},{"ticker":"FOXO","todaysChangePerc":"-50.96273291925466","todaysChange":"-0.8205000000000001","date":"2025-05-07","direction":"loser"},{"ticker":"HAIN","todaysChangePerc":"-49.47653429602889","todaysChange":"-1.3705","date":"2025-05-07","direction":"loser"},{"ticker":"GB.WS","todaysChangePerc":"-48.93617021276596","todaysChange":"-0.0115","date":"2025-05-07","direction":"loser"},{"ticker":"PTN","todaysChangePerc":"-44.64705882352941","todaysChange":"-0.07590000000000001","date":"2025-05-07","direction":"loser"},{"ticker":"VLN.WS","todaysChangePerc":"-42.77375604452202","todaysChange":"-0.029898","date":"2025-05-07","direction":"loser"},{"ticker":"TOVX","todaysChangePerc":"-41.735294117647065","todaysChange":"-0.5676000000000001","date":"2025-05-07","direction":"loser"},{"ticker":"COEPW","todaysChangePerc":"-39.20972644376899","todaysChange":"-0.012899999999999998","date":"2025-05-07","direction":"loser"},{"ticker":"WGSWW","todaysChangePerc":"-37.83783783783783","todaysChange":"-0.0378","date":"2025-05-07","direction":"loser"},{"ticker":"VSTS","todaysChangePerc":"-37.256027554535024","todaysChange":"-3.245000000000001","date":"2025-05-07","direction":"loser"},{"ticker":"MYGN","todaysChangePerc":"-37.00137551581843","todaysChange":"-2.6899999999999995","date":"2025-05-07","direction":"loser"},{"ticker":"REVBW","todaysChangePerc":"-34.32835820895522","todaysChange":"-0.0046","date":"2025-05-07","direction":"loser"},{"ticker":"STRZ","todaysChangePerc":"-32.93532338308458","todaysChange":"-6.620000000000001","date":"2025-05-07","direction":"loser"},{"ticker":"ZCARW","todaysChangePerc":"-32.432432432432435","todaysChange":"-0.009600000000000001","date":"2025-05-07","direction":"loser"},{"ticker":"WW","todaysChangePerc":"-31.89873417721519","todaysChange":"-0.252","date":"2025-05-07","direction":"loser"},{"ticker":"KTTA","todaysChangePerc":"-28.947368421052627","todaysChange":"-0.43999999999999995","date":"2025-05-07","direction":"loser"},{"ticker":"MLGO","todaysChangePerc":"-28.40909090909091","todaysChange":"-1","date":"2025-05-07","direction":"loser"},{"ticker":"MNTSW","todaysChangePerc":"-27.338129496402875","todaysChange":"-0.007599999999999999","date":"2025-05-07","direction":"loser"},{"ticker":"ADNWW","todaysChangePerc":"-27.11864406779661","todaysChange":"-0.0031999999999999997","date":"2025-05-07","direction":"loser"}]}]
+2025-05-07 10:22:32 [main] INFO  com.pillowsuite.jobs.DailyJob - Top movers processed.
+2025-05-07 10:22:32 [main] INFO  com.pillowsuite.jobs.DailyJob - Not end of day. Market summary and ticker did not process.
+2025-05-07 10:22:32 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job complete.
+2025-05-08 00:40:33 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job starting for 2025-05-08.
+2025-05-08 00:40:33 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 00:40:33 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-08 00:40:33 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-08 00:40:33 [main] INFO  c.p.service.RabbitMqPublisher - publishing to top_movers
+2025-05-08 00:40:33 [main] DEBUG c.p.service.RabbitMqPublisher - published: [{"tickers":[]},{"tickers":[]}]
+2025-05-08 00:40:33 [main] INFO  com.pillowsuite.jobs.DailyJob - Top movers processed.
+2025-05-08 00:40:33 [main] INFO  com.pillowsuite.jobs.DailyJob - Not end of day. Market summary and ticker did not process.
+2025-05-08 00:40:33 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job complete.
+2025-05-08 00:44:15 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job starting for 2025-05-08.
+2025-05-08 00:44:15 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 00:44:15 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-08 00:44:15 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-08 00:44:16 [main] INFO  c.p.service.RabbitMqPublisher - publishing to top_movers
+2025-05-08 00:44:16 [main] DEBUG c.p.service.RabbitMqPublisher - published: [{"tickers":[]},{"tickers":[]}]
+2025-05-08 00:44:16 [main] INFO  com.pillowsuite.jobs.DailyJob - Top movers processed.
+2025-05-08 00:44:16 [main] INFO  com.pillowsuite.jobs.DailyJob - Not end of day. Market summary and ticker did not process.
+2025-05-08 00:44:16 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job complete.
+2025-05-08 00:48:33 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job starting for 2025-05-08.
+2025-05-08 00:48:33 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 00:48:33 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-08 00:48:33 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-08 00:48:33 [main] INFO  c.p.service.RabbitMqPublisher - publishing to top_movers
+2025-05-08 00:48:33 [main] DEBUG c.p.service.RabbitMqPublisher - published: [{"tickers":[]},{"tickers":[]}]
+2025-05-08 00:48:33 [main] INFO  com.pillowsuite.jobs.DailyJob - Top movers processed.
+2025-05-08 00:48:33 [main] INFO  com.pillowsuite.jobs.DailyJob - Not end of day. Market summary and ticker did not process.
+2025-05-08 00:48:33 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job complete.
+2025-05-08 00:51:19 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job starting for 2025-05-08.
+2025-05-08 00:51:19 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 00:51:19 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-08 00:51:19 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-08 00:51:19 [main] INFO  c.p.service.RabbitMqPublisher - publishing to top_movers
+2025-05-08 00:51:19 [main] DEBUG c.p.service.RabbitMqPublisher - published: [{"tickers":[]},{"tickers":[]}]
+2025-05-08 00:51:19 [main] INFO  com.pillowsuite.jobs.DailyJob - Top movers processed.
+2025-05-08 00:51:19 [main] INFO  com.pillowsuite.jobs.DailyJob - Not end of day. Market summary and ticker did not process.
+2025-05-08 00:51:19 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job complete.
+2025-05-08 00:53:25 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job starting for 2025-05-08.
+2025-05-08 00:53:25 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 00:53:25 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-08 00:53:25 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-08 00:53:25 [main] INFO  c.p.service.RabbitMqPublisher - publishing to top_movers
+2025-05-08 00:53:25 [main] DEBUG c.p.service.RabbitMqPublisher - published: [{"tickers":[]},{"tickers":[]}]
+2025-05-08 00:53:25 [main] INFO  com.pillowsuite.jobs.DailyJob - Top movers processed.
+2025-05-08 00:53:25 [main] INFO  com.pillowsuite.jobs.DailyJob - Not end of day. Market summary and ticker did not process.
+2025-05-08 00:53:25 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job complete.
+2025-05-08 00:54:00 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job starting for 2025-05-08.
+2025-05-08 00:54:00 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 00:54:01 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-08 00:54:01 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-08 00:54:01 [main] INFO  c.p.service.RabbitMqPublisher - publishing to top_movers
+2025-05-08 00:54:01 [main] DEBUG c.p.service.RabbitMqPublisher - published: [{"tickers":[]},{"tickers":[]}]
+2025-05-08 00:54:01 [main] INFO  com.pillowsuite.jobs.DailyJob - Top movers processed.
+2025-05-08 00:54:01 [main] INFO  com.pillowsuite.jobs.DailyJob - Not end of day. Market summary and ticker did not process.
+2025-05-08 00:54:01 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job complete.
+2025-05-08 00:54:36 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job starting for 2025-05-07.
+2025-05-08 00:54:36 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-08 00:54:36 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-08 00:54:36 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-08 00:54:36 [main] INFO  c.p.service.RabbitMqPublisher - publishing to top_movers
+2025-05-08 00:54:36 [main] DEBUG c.p.service.RabbitMqPublisher - published: [{"tickers":[]},{"tickers":[]}]
+2025-05-08 00:54:36 [main] INFO  com.pillowsuite.jobs.DailyJob - Top movers processed.
+2025-05-08 00:54:36 [main] INFO  com.pillowsuite.jobs.DailyJob - Not end of day. Market summary and ticker did not process.
+2025-05-08 00:54:36 [main] INFO  com.pillowsuite.jobs.DailyJob - Daily job complete.
