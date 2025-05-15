@@ -1,0 +1,9 @@
+F:\Dev\PillowSuite\rodimus-pipeline\src\main\java\com\pillowsuite\controller\ConsumerController.java
+F:\Dev\PillowSuite\rodimus-pipeline\src\main\java\com\pillowsuite\jobs\ConsumeAndWriteToDb.java
+F:\Dev\PillowSuite\rodimus-pipeline\src\main\java\com\pillowsuite\service\consumers\AllTickersConsumer.java
+F:\Dev\PillowSuite\rodimus-pipeline\src\main\java\com\pillowsuite\service\consumers\DailyMarketSummaryConsumer.java
+F:\Dev\PillowSuite\rodimus-pipeline\src\main\java\com\pillowsuite\service\consumers\RabbitMqConsumer.java
+F:\Dev\PillowSuite\rodimus-pipeline\src\main\java\com\pillowsuite\service\consumers\TickerOverviewConsumer.java
+F:\Dev\PillowSuite\rodimus-pipeline\src\main\java\com\pillowsuite\service\consumers\TopMoversConsumer.java
+F:\Dev\PillowSuite\rodimus-pipeline\src\main\java\com\pillowsuite\service\ConsumerService.java
+F:\Dev\PillowSuite\rodimus-pipeline\src\main\java\ScratchTest.java
