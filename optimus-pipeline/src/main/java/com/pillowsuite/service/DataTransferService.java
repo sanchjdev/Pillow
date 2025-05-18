@@ -7,6 +7,7 @@ import com.pillowsuite.service.requests.MoverRequest;
 import com.pillowsuite.service.requests.TickerOverviewRequest;
 import com.pillowsuite.shared.model.dto.*;
 import com.pillowsuite.shared.model.enums.RabbitMQueue;
+import com.pillowsuite.shared.util.DataUtil;
 import com.pillowsuite.util.MarketDateUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.concurrent.TimeoutException;
+import java.util.function.Predicate;
 
 public class DataTransferService {
     private final Logger logger = LoggerFactory.getLogger(DataTransferService.class);
@@ -90,11 +92,26 @@ public class DataTransferService {
     // transfer process to gather today's market data for US stocks
     // date - YYYY-MM-DD
     public void DailyMarketSummary(LocalDate date) throws IOException {
-        String message = getMarketSummary(date);
-        // message has data
-        if(!message.equals("")){
+        FullMarketSummary fms = getMarketSummary(date);
+        if(fms != null){
+            filter(fms);
+            String message = mapper.writeValueAsString(fms);
             transfer(message);
         }
+    }
+
+    private void filter(FullMarketSummary fms){
+        Predicate<String> priceIsRight = p -> Double.parseDouble(p) >= 1 && Double.parseDouble(p) < 1000000;
+        Predicate<String> volumeIsRight = v -> Double.parseDouble(v) >= 100000;
+        List<MarketSummaryResults> summaries = fms.getSummaries();
+        List<MarketSummaryResults> filteredSummaries = new ArrayList<>();
+        for(MarketSummaryResults msr : summaries){
+            List<String> values = java.util.Arrays.asList(msr.getOpen(), msr.getClose(), msr.getHigh(), msr.getLow());
+            if(values.stream().allMatch(priceIsRight) && volumeIsRight.test(msr.getVolume())){
+                filteredSummaries.add(msr);
+            }
+        }
+        fms.setSummaries(filteredSummaries);
     }
 
     public void bulkDailyMarketSummary(LocalDate startDate, LocalDate endDate) throws IOException, InterruptedException {
@@ -134,6 +151,7 @@ public class DataTransferService {
             FullMarketSummary fms = request.fetchData(dateString);
 
             if(fms != null){
+                filter(fms);
                 for(MarketSummaryResults summary : fms.getSummaries()){
                     tickers.add(summary.getTicker());
                 }
@@ -191,7 +209,7 @@ public class DataTransferService {
     }
 
     // Returns a json string summary of the market. If data not available returns empty string
-    private String getMarketSummary(LocalDate date){
+    private FullMarketSummary getMarketSummary(LocalDate date){
         logger.info("Checking if market has data for " + date + ".");
         if(MarketDateUtil.hasMarketData(date)) {
             try {
@@ -205,17 +223,17 @@ public class DataTransferService {
                         summary.setMarketDate(dateString);
                     }
                 }
-                return (fms == null) ? "" : mapper.writeValueAsString(fms);
+                return fms;
 
             } catch (Exception e) {
                 e.printStackTrace();
                 logger.error("", e);
-                return "";
+                return null;
             }
         }
         else{
             logger.info("Market does not have data.");
-            return "";
+            return null;
         }
     }
 
@@ -254,6 +272,5 @@ public class DataTransferService {
             e.printStackTrace();
         }
     }
-
 
 }

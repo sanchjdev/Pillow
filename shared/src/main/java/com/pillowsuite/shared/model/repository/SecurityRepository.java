@@ -46,6 +46,8 @@ public class SecurityRepository extends JdbcRepository implements Repository<Mar
     @Override
     public void bulkSave(List<MarketSummaryResults> summaryResultsList) throws SQLException {
         stmt = conn.prepareStatement(INSERT_SQL);
+        conn.setAutoCommit(false);
+        String batchDate = summaryResultsList.get(0).getMarketDate();
         final int BATCH = 2000;
         int count = 0;
 
@@ -58,7 +60,9 @@ public class SecurityRepository extends JdbcRepository implements Repository<Mar
             }
         }
         stmt.executeBatch();
+        conn.commit();
         logger.debug("Saving remaining records.");
+        logger.info(String.format("Finished market summary inserts for %s", batchDate));
     }
 
     @Override

@@ -65,7 +65,7 @@ public abstract class RabbitMqConsumer {
         int processing = Integer.parseInt(values.get(processProp));
         while(processing != 2){
             values.set(processProp, String.valueOf(processing + 1));
-            Thread.sleep(30000);
+            Thread.sleep(60000);
             processing = Integer.parseInt(values.get(processProp));
             if(processing != 0){
                 logger.info(String.format("%s is not processing any messages - check %d", rabbitQueue.getName(), processing));
