@@ -59,7 +59,7 @@
                             <target>
                                 <!-- Copy the JAR file to another directory -->
                                 <copy file="${project.build.directory}/${title}.jar"
-                                      todir="F:/Dev/PillowDev/Built Jars"/>
+                                      todir="F:\Dev\Pillow\Utility\Built Jars"/>
                             </target>
                         </configuration>
                     </execution>
