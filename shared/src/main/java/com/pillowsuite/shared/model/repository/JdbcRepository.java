@@ -17,7 +17,9 @@ public abstract class JdbcRepository {
     protected static Connection conn;
 
     JdbcRepository() throws SQLException {
-        conn = DatabaseConnection.getConnection();
+        if(conn ==  null || conn.isClosed() || !conn.isValid(2)){
+            conn = DatabaseConnection.getConnection();
+        }
     }
 
 }

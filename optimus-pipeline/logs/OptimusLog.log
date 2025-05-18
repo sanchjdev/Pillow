@@ -74,3 +74,51 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.sort(java.util.Com
 2025-05-12 23:11:49 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
 2025-05-12 23:11:49 [main] INFO  c.p.service.RabbitMqPublisher - connection created
 2025-05-12 23:11:49 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 15:26:47 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 15:26:47 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 15:26:47 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 15:27:13 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 15:27:13 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 15:27:13 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 15:28:02 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 15:28:03 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 15:28:03 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 17:22:05 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 17:22:05 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 17:22:05 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 17:22:26 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 17:22:26 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 17:22:26 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 17:24:02 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 17:24:02 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 17:24:02 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 21:55:02 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 21:55:02 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 21:55:02 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 21:59:15 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 21:59:15 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 21:59:15 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 22:00:02 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 22:00:02 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 22:00:02 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 22:00:49 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 22:00:49 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 22:00:49 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 22:02:43 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 22:02:43 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 22:02:43 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 22:03:48 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 22:03:48 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 22:03:48 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 22:10:25 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 22:10:25 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 22:10:25 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 22:11:01 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 22:11:01 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 22:11:01 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 22:14:59 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 22:14:59 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 22:14:59 [main] INFO  c.p.service.RabbitMqPublisher - channel created
+2025-05-17 22:15:20 [main] DEBUG c.r.client.impl.ConsumerWorkService - Creating executor service with 24 thread(s) for consumer work service
+2025-05-17 22:15:20 [main] INFO  c.p.service.RabbitMqPublisher - connection created
+2025-05-17 22:15:20 [main] INFO  c.p.service.RabbitMqPublisher - channel created

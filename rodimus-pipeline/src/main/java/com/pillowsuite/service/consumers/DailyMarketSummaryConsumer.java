@@ -31,11 +31,12 @@ public class DailyMarketSummaryConsumer extends RabbitMqConsumer {
             values.set(processProp, "0");
             try{
                 FullMarketSummary fullMarketSummary = mapper.readValue(message, new TypeReference<>() {});
-                SecurityRepository  securityRepository = new SecurityRepository();
+                SecurityRepository securityRepository = new SecurityRepository();
                 securityRepository.bulkSave(fullMarketSummary.getSummaries());
             } catch(SQLException se){
                 se.printStackTrace();
             } catch(Exception e){
+                e.printStackTrace();
                 logger.info("Message is empty.");
             }
         };

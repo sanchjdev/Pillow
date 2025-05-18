@@ -34,7 +34,6 @@ public class RabbitMqPublisher {
     public void publish(String queueName, String message) throws IOException {
         logger.info("publishing to " + queueName);
         channel.basicPublish("", queueName, null, message.getBytes(StandardCharsets.UTF_8));
-        logger.debug("published: " + message);
     }
 
     public void close() throws IOException, TimeoutException {
