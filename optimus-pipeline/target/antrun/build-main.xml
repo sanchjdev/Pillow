@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project name="maven-antrun-" default="main">
-  <target name="main">
-    <copy file="F:\Dev\Pillow\PillowPipelines\optimus-pipeline\target/BulkMarketSummary.jar" todir="F:\Dev\Pillow\Utility\Built Jars" />
-  </target>
-</project>
